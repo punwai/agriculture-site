@@ -1,5 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
 .App {
   text-align: center;
+}
+
+body {
+  font-family: 'Kanit', sans-serif !important;
 }
 
 .App-logo {
@@ -24,8 +32,17 @@
   color: white;
 }
 
+.custom-navbar {
+  background-color: #FFFFFF !important;
+}
+
+
 .App-link {
   color: #61dafb;
+}
+
+.top-margin-minus {
+  margin-top: -2px;
 }
 
 @keyframes App-logo-spin {
