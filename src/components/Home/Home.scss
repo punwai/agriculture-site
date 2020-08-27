@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+.subtitle {
+  font-weight: 650;
+}
+
 .info-font {
   font-size: 20px;
 }
@@ -41,16 +45,6 @@
 
 p {
   color: #444444;
-}
-
-.oldPrice {
-  text-decoration: line-through;
-  color: red;
-}
-
-.newPrice {
-  color: #3DC75B;
-  font-size: 20px;
 }
 
 .cust-card{

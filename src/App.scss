@@ -1,10 +1,14 @@
-@import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 
 .App {
   text-align: center;
 }
+
+$theme-colors: (
+  "success": #2c7d00
+);
+
 
 body {
   font-family: 'Kanit', sans-serif !important;
@@ -53,3 +57,4 @@ body {
     transform: rotate(360deg);
   }
 }
+@import "~bootstrap/scss/bootstrap";

@@ -21,6 +21,10 @@
   font-size: 24px !important;
 }
 
+.card-product {
+  padding: 2px !important;
+}
+
 .tractor {
   position: absolute;
   top: -200px;
@@ -34,13 +38,13 @@ p {
   color: #444444;
 }
 
+
 .oldPrice {
   text-decoration: line-through;
-  color: red;
+  color: grey;
 }
 
 .newPrice {
-  color: #3DC75B;
   font-size: 16px;
 }
 
