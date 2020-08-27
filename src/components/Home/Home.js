@@ -13,11 +13,12 @@ export default class Home extends Component {
                 <div className="home-container">
                     <Container>
                         <Row>
-                            <Col xs={12} sm={6}>
+                            <Col xs={12} sm={12} lg={6} md={4}>
                                 <img src={require('./mockupimg.png')} width="100%"/>
                             </Col>
-                            <Col xs={12} sm={6} className="bannerText align-items-center">
-                                อุปกรณ์เกษตร์ ซื้อง่ายใช้แค่ไลน์
+                            <Col xs={12} sm={12} lg={6} md={8} className="pt-5 align-items-center">
+                                <div className="bannerText pb-3">RaiLink อุปกรณ์เกษตร์ไทม์แชร์</div>
+                                <div className="bannerDescription" >RaiLink คือโครงการเพื่อทำให้ อุปกรณ์เกษตร์ คุณภาพดี ทันสมัย เข้าถึงชาวเกษตร์ได้ ด้วยระบบไทม์แชร์ของเรา ใช้อุปกรณ์ในระยะเวลาเท่าที่คุณต้องการ เหมือนเช่าแต่คุ้มเหมือนซื้อเต็มราคา</div>
                             </Col>
                         </Row>
                     </Container>
@@ -34,7 +35,7 @@ export default class Home extends Component {
 
 ซื้ออุปกรรณ์ในราคาต่ำกว่า 50% และหมดกังวลด้วยระบบประกัน 2 ปีของเรา 
 
-หมดการเถียงกันเรื่องอุปกรรณ์ด้วยระบบ Mr Share ตัวกลางของเรา รับสินค้า ได้สินค้าเหมือนเช่าราคาเหมือนซื้อ!</p>
+หมดการเถียงกันเรื่องอุปกรรณ์ด้วยระบบตัวกลางประกันของเรา รับสินค้า ได้สินค้าเหมือนเช่าราคาเหมือนซื้อ!</p>
                         </Col>
                     </Row>
                 </Container>
