@@ -62,7 +62,7 @@ class ItemPage extends Component {
                 <br/>
                 <Container>
                     <h2>สินค้าใหม่</h2>
-                    <h4>{ this.state.itemsList.length } รายการ</h4>
+                    <h4 style={{ fontSize: '10' }}>{ this.state.itemsList.length } รายการ</h4>
                     <Row>
                         { this.state.itemsList.map((item, index) =>
                             <Col md={3}>

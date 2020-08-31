@@ -64,7 +64,7 @@ class App extends Component {
           <div>
                 <Navbar fill className="custom-navbar shadow" variant="light" expand="lg">
                   <Container>
-                  <Navbar.Brand className="m-0 p-0" href="/home"><img src={RailinkLogo} alt="React Logo" height="40"/></Navbar.Brand>
+                  <Navbar.Brand href="/home"><img src={RailinkLogo} alt="React Logo" height="40"/></Navbar.Brand>
                   <Navbar.Toggle style={{border: "none"}} aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav fill className="mr-auto">
