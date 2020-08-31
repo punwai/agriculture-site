@@ -21,7 +21,6 @@ import { CookiesProvider } from 'react-cookie';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
 import { connect } from 'react-redux';
-import { getAllItems } from './items';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

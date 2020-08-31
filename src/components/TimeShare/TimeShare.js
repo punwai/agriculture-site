@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, Form, FormControl, Button, Container, Row, Col, Card } from 'react-bootstrap';
 import './TimeShare.scss';
-import { getAllItems } from '../../items';
 import { db } from '../../firebase';
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
