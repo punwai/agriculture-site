@@ -3,9 +3,13 @@ import { Nav, Navbar, Form, FormControl, Button, Container, Row, Col, Card } fro
 import './Login.scss';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
+import { signInWithGoogle } from '../../firebase'
+import { UserContext } from '../../providers/UserProvider'
 
 export default class Home extends Component {
-    
+  
+  static contextType = UserContext;
+
     handleGoogleLogin = () => {
 
         const qParams = [
@@ -28,6 +32,7 @@ export default class Home extends Component {
         return (
             <div>
                 <Container fluid className="home-container">
+                {this.context.user}
                     <Row className="filler">
                     </Row>
                     <Row>
@@ -40,7 +45,10 @@ export default class Home extends Component {
                 </Container>
                 <Container>
                     <Col>Join Us Now. By making an account, you will be able to time-share equipments at low prices, for the exact times you need! Increase productivity, save your time, grow your farm!</Col>
-                    <Button onClick={this.handleGoogleLogin}>Hey</Button>
+                    <Button onClick={signInWithGoogle}
+                      className="">
+                      Sign in with Google
+                    </Button>
                </Container>
             </div>
         )

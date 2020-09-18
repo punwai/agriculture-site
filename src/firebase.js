@@ -16,6 +16,11 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();  
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
+export const signInWithGoogle = () => {
+    auth().signInWithPopup(provider);
+};
 export const auth = firebase.auth;
 export const db = firebase.firestore();
