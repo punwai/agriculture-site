@@ -57,6 +57,7 @@ class TimeShare extends Component {
 
     render() {
         console.log(this.props.basket)
+        console.log(this.props.user)
         return (
             <div>
                 <br/>
@@ -112,7 +113,7 @@ class TimeShare extends Component {
 }
 
 function mapStateToProps(state) {
-    return { basket: state.basket }
+    return { basket: state.basket, user: state.user }
 }
 
 export default connect(mapStateToProps)(withRouter(TimeShare));

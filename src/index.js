@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { CookiesProvider } from 'react-cookie';
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import basketReducer from './basket'
+import userReducer from './user'
 import { loadState, saveState } from './localStorage'
 
 // const SET_ID = 'ADD_TODO'
@@ -21,6 +22,7 @@ import { loadState, saveState } from './localStorage'
 //   SHOW_COMPLETED: 'SHOW_COMPLETED',
 //   SHOW_ACTIVE: 'SHOW_ACTIVE'
 // }
+
 
 // /*
 //  * action creators
@@ -54,8 +56,10 @@ import { loadState, saveState } from './localStorage'
 
 const persistedState = loadState();
 
+const rootReducer = combineReducers({basket: basketReducer, user: userReducer})
+
 const store = createStore(
-  basketReducer,
+  rootReducer,
   persistedState
 );
 

@@ -26,7 +26,12 @@ export default class Home extends Component {
           console.error(e);
         }
         
-      };
+    };
+
+    googleLogin(){
+      signInWithGoogle()
+      window.location.assign('/timeshare');
+    }
     
     render() {
         return (
@@ -45,7 +50,7 @@ export default class Home extends Component {
                 </Container>
                 <Container>
                     <Col>Join Us Now. By making an account, you will be able to time-share equipments at low prices, for the exact times you need! Increase productivity, save your time, grow your farm!</Col>
-                    <Button onClick={signInWithGoogle}
+                    <Button onClick={this.googleLogin}
                       className="">
                       Sign in with Google
                     </Button>
