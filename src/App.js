@@ -81,9 +81,9 @@ class App extends Component {
         <Router>
           <UserProvider/>
           <div>
-                <Navbar fill className="custom-navbar shadow" variant="light" expand="lg">
+                <Navbar fill className="custom-navbar" variant="light" expand="lg">
                   <Container>
-                  <Navbar.Brand href="/home"><img src={RailinkLogo} alt="React Logo" height="40"/></Navbar.Brand>
+                  <Navbar.Brand href="/home"><img src={RailinkLogo} alt="React Logo" height="60"/></Navbar.Brand>
                   <Navbar.Toggle style={{border: "none"}} aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav fill className="mr-auto">

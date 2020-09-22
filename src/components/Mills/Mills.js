@@ -68,7 +68,6 @@ class Mills extends Component {
         console.log(this.state.millsList)
         return (
             <div>
-
                 <br></br>
                 <Container >
                     <Row className="m-0">

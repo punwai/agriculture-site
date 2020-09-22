@@ -36,25 +36,22 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <Container fluid className="home-container">
-                {this.context.user}
-                    <Row className="filler">
-                    </Row>
-                    <Row>
-                        <Container>
-                        <Col className="bannerText">
-                            เข้าสู่ระบบ
-                        </Col>
-                        </Container>   
-                    </Row>
-                </Container>
-                <Container>
-                    <Col>Join Us Now. By making an account, you will be able to time-share equipments at low prices, for the exact times you need! Increase productivity, save your time, grow your farm!</Col>
+                <div className="home-container">
+                  <img class="secondsvg" src={require("../interim.svg")} alt="Kiwi standing on oval"/>
+                </div>
+                <Container className="shadow login-container text-center">
+                  <Col className="bannerText text-center">
+                      เข้าสู่ระบบ
+                  </Col>
+                  <Col>Join Us Now. By making an account, you will be able to time-share equipments at low prices, for the exact times you need! Increase productivity, save your time, grow your farm!</Col>
+                  <Col>
+                    <br/>
                     <Button onClick={this.googleLogin}
                       className="">
                       Sign in with Google
                     </Button>
-               </Container>
+                  </Col>
+                </Container>   
             </div>
         )
     }

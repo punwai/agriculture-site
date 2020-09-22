@@ -1,7 +1,4 @@
-.home-container {
-  text-align: center;
-  background: #7cb518;
-}
+
 
 .filler {
   height: 100px;
@@ -20,6 +17,15 @@
   
   height: 400px;
   width: auto;
+}
+
+.login-container{
+  margin-top: -200px;
+  background: white;
+  position: relative;
+  border-radius: 10px;
+  padding: 40px !important;
+  max-width: 600px !important;
 }
 
 p {

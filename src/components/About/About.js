@@ -58,11 +58,11 @@ export default class About extends Component {
         return (
             <div>
                 <div className="home-container">
+                  <img class="secondsvg" src={require("./interim.svg")} alt="Kiwi standing on oval"/>
                 </div>
                 <br/>
-                <Container style={{ maxWidth: "50%" }}>
+                <Container>
                     <br/>
-                    <h1 style={{ fontWeight: "700"}} className="">From The Founder</h1>
                     <p className="subdescription">
                         We at RaiLink are striving to create a society where agricultural practices and ways of lives can co-exist
                         with the rapidly changing Thai society. We believe that with the right development programs, incentives
@@ -81,11 +81,27 @@ export default class About extends Component {
                         grateful of our partners, who have made all of this possible, by lending us a hand with their shipment
                         networks and maintenance services.
                     </p>
-                    <h5 className="subtitle">Pun Suppakit Waiwitlikhit</h5>
+                    <br/>
+                    <br/>
+                    <h5 className="subtitle">From the Founder</h5>
                     <br/>
                     <img width="100%" src={require("./IMG_20200901_122603 (1).jpg")}></img>
-                        <Row>
-                    </Row>
+                    <br/>
+                    <br/>
+                    <p className="subdescription">
+                        In this photo is Khaw and I. In my mouth is the greatest, sweetest longbean in the world, organically-grown locally in our beautiful province of Saraburi.
+                        Thai agriculture feeds Thai people, but Thai farmers are amongst the poorest in the world.
+                        Since perhaps 12, working with me on the floor of my family's warehouse have always been former farmers, including Khaw. Our country's lack of investment 
+                        into the agricultural industry have led to a situation where Khaw and my fellow co-workers are forced down to Bangkok, where income is sufficient to sustain 
+                        their families.
+                        <br/>
+                        <br/>
+                        After a discussion with Khaw about his family's farming practices led me to realize that we need to change our archaic agricultural
+                        industry.
+                        Farmers do not need to abandon their homes to escape poverty. Japan has done it, Korea has done it, the USA has done it, we can do it.
+                    </p>
+                    <Row>
+                </Row>
                 </Container>
                 <Container>
                     <div className="specialContainer">

@@ -91,16 +91,17 @@ export default class Home extends Component {
         return (
             <div>
                 <div className="home-container">
+                    <img class="svg" src={require("./back.svg")} alt="Kiwi standing on oval"/>
+                </div>
+                <div className="overlay-text">
                     <Container className="pt-5 pb-5">
                         <Row>
-                            <Col xs={12} sm={12} lg={6} md={6}>
-                                <img src={require('./mockupimg.png')} width="100%"/>
-                            </Col>
+
                             <Col xs={12} sm={12} lg={6} md={6} className="pt-5 align-items-center">
                                 <div className="bannerText pb-3">RaiLink อุปกรณ์เกษตรไทม์แชร์</div>
                                 <div className="bannerDescription pb-3" >RaiLink คือองค์กรเพื่อทำให้ อุปกรณ์เกษตร คุณภาพดี ทันสมัย เข้าถึงชาวเกษตรได้ ด้วยระบบไทม์แชร์ของเรา ใช้อุปกรณ์ในระยะเวลาเท่าที่คุณต้องการ เหมือนเช่าแต่คุ้มเหมือนซื้อเต็มราคา</div>
                                 <div className="bannerDescription pb-5"><Button href="/timeshare" style={{ width: "30%" }} variant="danger">                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                            <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
                         </svg>&nbsp;&nbsp;สั่งเลย!</Button></div>
                             </Col>
                         </Row>
@@ -124,7 +125,24 @@ export default class Home extends Component {
                 </Container> */}
                 <br/>
                 <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                 <Container>
+                    <h2 className="subtitle">RAILINK TIMESHARE คืออะไร?</h2>
+                    <p>
+                        We at RaiLink are striving to create a society where agricultural practices and ways of lives can co-exist
+                        with the rapidly changing Thai society. We believe that with the right development programs, incentives
+                        and policies, it is not necessary for agricultural families to abandon their home and heritage or abandon
+                        their children to find work in the cities, just to make basic living income.
+                        Empowerment, technology, and sustainability is at the heart of our model, and our work has been
+                        shaped by the words of farmers. As technologist ourselves, we believe Thai agricultural societies could
+                        fundamentally shift through better communication, and implementing a sharing economy system. We
+                        have drawn our inspiration from innovative companies such as Ricult, and will continue to look up
+                        towards such leaders for future development.
+                    </p>
+                    <br/><br/>
                     <h2 className="subtitle">เช่าง่าย 4 ขั้น</h2>
                     <p className="subdescription">
                         ไม่ต้องตั้งอะไรใหม่ แค่มีแอคเคา LINE ก็สั่งได้!
@@ -181,6 +199,25 @@ export default class Home extends Component {
                         }
                     </Slider>
                     </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    <h2 className="subtitle">ผู้ร่วมกิจการ</h2>
+                    <p className="subdescription">
+                        สิ่งที่เราทำในวันนี้จะเป็นไปไม่ได้ถ้าไม่มีความช่วยเหลือจากสังคมในระดับนี้
+                    </p>
+                    <Row>
+                        <Col xs={6} md={3} className="p-5"><img src={require('./ktw-logo.png')} alt="React Logo" width="100%"/>
+                        </Col>
+                        <Col xs={6} md={3} className="p-5"><img src={require('./polo-logo.png')} alt="React Logo" width="100%"/>
+                        </Col>
+                        <Col xs={6} md={3} className="p-5"><img src={require('./b-quik.png')} alt="React Logo" width="100%"/>
+                        </Col>
+                        <Col xs={6} md={3} className="p-5"><img src={require('./ebara.png')} alt="React Logo" width="100%"/>
+                        </Col>
+                    </Row>
                 </Container>
 
             </div>
