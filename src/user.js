@@ -1,13 +1,9 @@
-function userReducer(state = {user: undefined}, action) {
+function userReducer(state = null, action) {
     switch (action.type) {
         case 'SET_USER':
-            return Object.assign({}, state, {
-                user: action.user
-            })
+            return action.user
         case 'CLEAR_USER':
-            return Object.assign({}, state, {
-                user: undefined
-            })
+            return null
         default:
             return state
     }

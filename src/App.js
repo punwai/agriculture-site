@@ -7,10 +7,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Nav, Navbar, Form, FormControl, Button, Container, } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown, Form, FormControl, Button, Container, } from 'react-bootstrap';
 import Home from './components/Home/Home';
+import About from './components/About/About';
+import Model from './components/Model/Model';
 import Login from './components/Login/Login';
 import Basket from './components/Basket/Basket';
+import ItemPage from './components/ItemPage/ItemPage';
+import Mills from './components/Mills/Mills';
 import TimeShare from './components/TimeShare/TimeShare';
 import Order from './components/Order/Order';
 import SecretAdmin from './components/SecretAdmin/SecretAdmin';
@@ -83,7 +87,13 @@ class App extends Component {
                   <Navbar.Toggle style={{border: "none"}} aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav fill className="mr-auto">
-                      <Nav.Link href="/about"><b>เกี่ยวกับ</b></Nav.Link>
+                      <NavDropdown title="เกี่ยวกับ" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="/fromthefounder">จากใจของทีม</NavDropdown.Item>
+                        <NavDropdown.Item href="/model">Strategic Goals</NavDropdown.Item>
+                        <NavDropdown.Item href="/partners">Partnerships</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
+                      </NavDropdown>
                       <Nav.Link href="/features">ข่าวสาร</Nav.Link>
                       <Nav.Link href="/partner">ร่วมงาน</Nav.Link>
                       <Nav.Link href="/timeshare">ไทม์แชร์</Nav.Link>
@@ -92,9 +102,9 @@ class App extends Component {
                       <Nav.Link href="/basket"><Button variant="success">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-                        </svg>&nbsp;ตะกร้า</Button>
+                        </svg>&nbsp;ตะกร้า ({this.props.basket.length})</Button>
                       </Nav.Link>
-                      { this.props.user.user == null ? 
+                      { this.props.user == null ? 
                         <Nav.Link href="/login">
                           <Button variant="secondary">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-person top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -122,13 +132,20 @@ class App extends Component {
             {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
               <Switch>
-                <Route path="/about">
+                <Route path="/fromthefounder">
+                  <About/>
+                </Route>
+                <Route path="/model">
+                  <Model/>
                 </Route>
                 <Route path="/order/:id">
                   <Order/>
                 </Route>
                 <Route path="/timeshare">
                   <TimeShare/>
+                </Route>
+                <Route path="/item/:id">
+                  <ItemPage/>
                 </Route>
                 <Route path="/login">
                   <Login/>
@@ -138,6 +155,9 @@ class App extends Component {
                 </Route>
                 <Route path="/secretadmin">
                   <SecretAdmin/>
+                </Route>
+                <Route path="/mills">
+                  <Mills/>
                 </Route>
                 <Route path="/">
                   <Home />

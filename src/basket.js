@@ -1,40 +1,37 @@
-function basketReducer(state = {basket: []}, action) {
+function basketReducer(state = [] , action) {
+    console.log(action)
+
     switch (action.type) {
         case 'ADD_ITEM':
-            let index = state.basket.findIndex(el => el.item.id == action.item.id);
+            let index = state.findIndex(el => el.item.id == action.item.id);
             if (index == -1) {
-                return Object.assign({}, state, {
-                    basket: [
-                        ...state.basket, {
+                return [
+                        ...state, {
                             item: action.item,
-                            amount: action.amount
+                            amount: 1
                         }
                     ]
-                })
             } else {
-                return Object.assign({}, state, {
-                    basket: [
-                        ...state.basket.filter((el) => {
-                            if(el.item.id == action.item.id) {
-                                var new_item = el
-                                new_item.amount = action.amount
-                                return new_item
-                            }else {
-                                return el
-                            }
-                        })
-                    ]
-                })
+                return [
+                    ...state.filter((el) => {
+                        if(el.item.id == action.item.id) {
+                            var new_item = el
+                            new_item.amount = action.amount
+                            return new_item
+                        }else {
+                            return el
+                        }
+                    })
+                ]
             }
                 
         case 'CLEAR_BASKET':
-            return {basket: []};
+            return [];
     
         case 'REMOVE_ITEM':
-            return Object.assign({}, state, {
-                basket: [
-                    ...state.basket.filter(id => id !== action.id),
-                ]});
+            return [
+                ...state.filter(el => el.item.id !== action.item.id)
+            ];
         default:
             return state
     }
