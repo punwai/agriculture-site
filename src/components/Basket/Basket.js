@@ -67,7 +67,7 @@ class Basket extends Component {
                                     { basketItem.item.name }
                                 </td>
                                 <td md={4}>
-                                    ${ basketItem.item.price_discount }
+                                    ฿{ basketItem.item.price_discount }
                                 </td>
                                 <td>
                                     <Button onClick={this.removeOrder.bind(this, basketItem)} className="p-1 mr-auto" style={{ fontSize: "12px"}} variant="danger">
@@ -83,7 +83,7 @@ class Basket extends Component {
                                     Total Price:
                                 </td>
                                 <td md={4}>
-                                    5000
+                                    <i>Please enter both start and end dates to calculate</i>
                                 </td>
                                 <td>
                                     
@@ -92,8 +92,12 @@ class Basket extends Component {
                         </tbody>
                     </Table>
                     <Form.Group controlId="formGroupEmail">
-                        <Form.Label>วันเริ่มจอง</Form.Label>
-                        <Form.Control type="email" placeholder="วันที่" />
+                        <Form.Label>จองจาก</Form.Label>
+                        <Form.Control type="email" placeholder="วันที่เร้มจอง"/>
+                    </Form.Group>
+                    <Form.Group controlId="formGroupEmail">
+                        <Form.Label>จอกถึง</Form.Label>
+                        <Form.Control type="email" placeholder="วันที่เร้มจอง"/>
                     </Form.Group>
 
                     <Form>
@@ -102,6 +106,8 @@ class Basket extends Component {
                         </Button>
                     </Form>
                 </Container>
+                <br/>
+                <br/>
             </div>
         )
     }

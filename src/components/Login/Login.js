@@ -39,7 +39,7 @@ export default class Home extends Component {
                 <div className="home-container">
                   <img class="secondsvg" src={require("../interim.svg")} alt="Kiwi standing on oval"/>
                 </div>
-                <Container className="shadow login-container text-center">
+                <Container className="shadow login-container text-center padding-large">
                   <Col className="bannerText text-center">
                       เข้าสู่ระบบ
                   </Col>

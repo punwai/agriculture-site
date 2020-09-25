@@ -80,7 +80,7 @@ export default class Home extends Component {
               {
                 breakpoint: 480,
                 settings: {
-                  slidesToShow: 2,
+                  slidesToShow: 3,
                   slidesToScroll: 1
                 }
               }
@@ -98,7 +98,7 @@ export default class Home extends Component {
                         <Row>
 
                             <Col xs={12} sm={12} lg={6} md={6} className="pt-5 align-items-center">
-                                <div className="bannerText pb-3">RaiLink อุปกรณ์เกษตรไทม์แชร์</div>
+                                <div className="bannerText pb-3">plookngaimak.com อุปกรณ์เกษตรไทม์แชร์</div>
                                 <div className="bannerDescription pb-3" >RaiLink คือองค์กรเพื่อทำให้ อุปกรณ์เกษตร คุณภาพดี ทันสมัย เข้าถึงชาวเกษตรได้ ด้วยระบบไทม์แชร์ของเรา ใช้อุปกรณ์ในระยะเวลาเท่าที่คุณต้องการ เหมือนเช่าแต่คุ้มเหมือนซื้อเต็มราคา</div>
                                 <div className="bannerDescription pb-5"><Button href="/timeshare" style={{ width: "30%" }} variant="danger">                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
@@ -144,26 +144,29 @@ export default class Home extends Component {
                     </p>
                     <br/><br/>
                     <h2 className="subtitle">เช่าง่าย 4 ขั้น</h2>
-                    <p className="subdescription">
-                        ไม่ต้องตั้งอะไรใหม่ แค่มีแอคเคา LINE ก็สั่งได้!
-                    </p>
+                    <br/>
                     <Row>
-                        <Col xs={6} md={3} className="p-5"><img src={Graphics1} alt="React Logo" width="100%"/>
-                            <div className="text-center mt-4 info-font">สั่งสินค้าจากเวบ</div>
+                        <Col className="text-center pb-3" xs={6} md={3}><img src={Graphics1} className="img-main" alt="React Logo" width="100%"/>
+                            <h3 className="text-center mt-4 title-info">สั่ง</h3>
+                            <div className="text-center mt-4">สั่งสินค้าจากเวบ สามารถเลือกจากสินค้าแบรนด์ต่างๆ เช่น Makita, Polo, Ebara ได้ และมีเครื่องมือสำหรับหลายสายงานเช่นการปลูกข้าว ผัก หรือผลไม้</div>
                         </Col>
-                        <Col xs={6} md={3} className="p-5"><img src={Graphics4} alt="React Logo" width="100%"/>
-                            <div className="text-center mt-4 info-font">จองเวลาไทม์แชร์</div>
+                        <Col className="text-center pb-3" xs={6} md={3}><img className="img-main" src={Graphics4} alt="React Logo" width="100%"/>
+                            <h3 className="text-center mt-4 title-info">จอง</h3>
+                            <div className="text-center mt-4">จองสินค้าในเดือนที่คุณต้องการในช่วงปี จองได้จาก 2 เดือนต่อปีถึง 6 เดือนต่อปี!</div>
                         </Col>
-                        <Col xs={6} md={3} className="p-5"><img src={Graphics3} alt="React Logo" width="100%"/>
-                            <div className="text-center mt-4 info-font">รอยืนยันและจ่ายผ่าน LINE</div>
+                        <Col className="text-center pb-3" xs={6} md={3}><img className="img-main" src={Graphics3} alt="React Logo" width="100%"/>
+                            <h3 className="text-center mt-4 title-info">ยืนยัน</h3>
+                            <div className="text-center mt-4">ยืนยันโดยการส่งบัตรประชาชนไปให้ทาง LINE OFFICIAL ACCOUNT ของ RaiLink เพื่อยืนยันการสั่งซื้อ ให้เวลาทีม 1 อาทิตย์เพื่อจับคู่อุปกรรณ์ของคุณไปกับผู้จองคนอื่นๆ</div>
                         </Col>
-                        <Col xs={6} md={3} className="p-5"><img src={Graphics2} alt="React Logo" width="100%"/>
-                            <div className="text-center mt-4 info-font">ของส่งภายใน 2 อาทิตย์</div>
+                        <Col className="text-center pb-3" xs={6} md={3}><img className="img-main" src={Graphics2} alt="React Logo" width="100%"/>
+                            <h3 className="text-center mt-4 title-info">ส่ง</h3>
+                            <div className="text-center mt-4">ของจะส่งภายใน 2 อาทิตย์ผ่านระบบการขนส่งของ KTW เราส่งได้ทั่วภาคกลางและภาคอีสาน</div>
                         </Col>
                     </Row>
-
+                    <br/>
+                    <br/>
                     <h2 className="subtitle">สินค้าเข้าใหม่!</h2>
-                    <p className="subdescription">
+                    <p>
                         สินค้าของเรานั้นสามารถนำไปใช้ในงานเกษตรหลายชนิด รวมไปถึงเกษตกรณ์ปลูกผลผักผลไม้ตามฤดูกาล
                     </p>
                 </Container>
@@ -209,13 +212,13 @@ export default class Home extends Component {
                         สิ่งที่เราทำในวันนี้จะเป็นไปไม่ได้ถ้าไม่มีความช่วยเหลือจากสังคมในระดับนี้
                     </p>
                     <Row>
-                        <Col xs={6} md={3} className="p-5"><img src={require('./ktw-logo.png')} alt="React Logo" width="100%"/>
+                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/ktw-logo.png')} alt="React Logo" width="100%"/>
                         </Col>
-                        <Col xs={6} md={3} className="p-5"><img src={require('./polo-logo.png')} alt="React Logo" width="100%"/>
+                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/polo-logo.png')} alt="React Logo" width="100%"/>
                         </Col>
-                        <Col xs={6} md={3} className="p-5"><img src={require('./b-quik.png')} alt="React Logo" width="100%"/>
+                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/b-quik.png')} alt="React Logo" width="100%"/>
                         </Col>
-                        <Col xs={6} md={3} className="p-5"><img src={require('./ebara.png')} alt="React Logo" width="100%"/>
+                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/ebara.png')} alt="React Logo" width="100%"/>
                         </Col>
                     </Row>
                 </Container>

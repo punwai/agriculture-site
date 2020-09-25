@@ -47,7 +47,7 @@ export default class About extends Component {
               {
                 breakpoint: 480,
                 settings: {
-                  slidesToShow: 2,
+                  slidesToShow: 3,
                   slidesToScroll: 1
                 }
               }
@@ -57,13 +57,17 @@ export default class About extends Component {
       
         return (
             <div>
-                <div className="home-container">
-                  <img class="secondsvg" src={require("./interim.svg")} alt="Kiwi standing on oval"/>
+                <div className="home-container green-container">
+                  <Container className="text-left text-light"><h2 className="m-0">The NaLink Mission</h2></Container>
+                </div>
+                <div className="home-container about-container image-container ">
+                  <h2 className="inside-text">ทำไมถึงต้องมี นาลินค์?</h2>
                 </div>
                 <br/>
-                <Container>
+                <Container className="small-container">
                     <br/>
-                    <p className="subdescription">
+                    <h3>It's <i>time</i> for our beloved Thai agriculture to change</h3>
+                    <p className="normal-text">
                         We at RaiLink are striving to create a society where agricultural practices and ways of lives can co-exist
                         with the rapidly changing Thai society. We believe that with the right development programs, incentives
                         and policies, it is not necessary for agricultural families to abandon their home and heritage or abandon
@@ -82,24 +86,38 @@ export default class About extends Component {
                         networks and maintenance services.
                     </p>
                     <br/>
-                    <br/>
                     <h5 className="subtitle">From the Founder</h5>
                     <br/>
-                    <img width="100%" src={require("./IMG_20200901_122603 (1).jpg")}></img>
-                    <br/>
-                    <br/>
-                    <p className="subdescription">
-                        In this photo is Khaw and I. In my mouth is the greatest, sweetest longbean in the world, organically-grown locally in our beautiful province of Saraburi.
+                    <Row>
+                      <Col md={6} lg={5}>
+                      <img width="100%" src={require("./1600769328686.jpg")}></img>
+                      </Col>
+                      <Col md={6} lg={7}>
+                      In this photo is Khaw and I. In my mouth is the greatest, sweetest longbean in the world, organically-grown locally in our beautiful province of Saraburi.
                         Thai agriculture feeds Thai people, but Thai farmers are amongst the poorest in the world.
                         Since perhaps 12, working with me on the floor of my family's warehouse have always been former farmers, including Khaw. Our country's lack of investment 
-                        into the agricultural industry have led to a situation where Khaw and my fellow co-workers are forced down to Bangkok, where income is sufficient to sustain 
-                        their families.
+                        into the agricultural industry have led to a situation where Khaw and my fellow co-workers are forced down to Bangkok to find sufficient income for their families.
                         <br/>
                         <br/>
                         After a discussion with Khaw about his family's farming practices led me to realize that we need to change our archaic agricultural
-                        industry.
-                        Farmers do not need to abandon their homes to escape poverty. Japan has done it, Korea has done it, the USA has done it, we can do it.
+                        industry. Farmers shouldn't need to abandon their homes to escape poverty. Japan has done it, Korea has done it, the USA has done it, Thailand can do it. Hence, we started RaiLink together<br/><br/>
+                        - Suppakit
+                      </Col>
+                      <Col md={0} lg={3}></Col>
+                    </Row>
+                    <h5 className="subtitle">Our Strategy</h5>
+                    <p>
+                    In this photo is Khaw and I. In my mouth is the greatest, sweetest longbean in the world, organically-grown locally in our beautiful province of Saraburi.
+                        Thai agriculture feeds Thai people, but Thai farmers are amongst the poorest in the world.
+                        Since perhaps 12, working with me on the floor of my family's warehouse have always been former farmers, including Khaw. Our country's lack of investment 
+                        into the agricultural industry have led to a situation where Khaw and my fellow co-workers are forced down to Bangkok to find sufficient income for their families.
+                        <br/>
+                        <br/>
+                        After a discussion with Khaw about his family's farming practices led me to realize that we need to change our archaic agricultural
+                        industry. Farmers shouldn't need to abandon their homes to escape poverty. Japan has done it, Korea has done it, the USA has done it, Thailand can do it. Hence, we started RaiLink together<br/><br/>
+                        - Suppakit
                     </p>
+                    <br/><br/>
                     <Row>
                 </Row>
                 </Container>

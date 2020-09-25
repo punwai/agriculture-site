@@ -57,13 +57,17 @@ export default class About extends Component {
       
         return (
             <div>
-                <div className="home-container">
+                <div className="home-container green-container ">
+                  <Container className="text-left text-light"><h2 className="m-0">NaLink's Strategic Goals</h2></Container>
+                </div>
+                <div className="home-container image-container model-container">
+                  <h2 className="inside-text"> การค้ายุติธรรม, การปลูกประสิทธิภาพ</h2>
                 </div>
                 <br/>
-                <Container style={{ maxWidth: "50%" }}>
+                <Container className="small-container">
                     <br/>
-                    <h1 style={{ fontWeight: "700"}} className="">From The Founder</h1>
-                    <p className="subdescription">
+                    <h1 style={{ fontWeight: "600"}} className="">Strategic Goals</h1>
+                    <p>
                     <h2>1. Modernization</h2>
 With better equipment, higher crop qualities can be achieved, and more time and labor can be spent on
 education and part-time jobs. We identify 2 distinct equipment usage practices: those who rely on
@@ -76,18 +80,18 @@ to operate 6 months a year, while certain fruit farms only require equipment 3-4
 replant old, dying fruit-yielding fields (eg. Durian, Mango, Rambutan, Starfruit, Coconut), or to simply
 sow the seeds to begin a new crop field (eg. Grape, Ginger). Our equipment time-sharing halves the
 price of equipment with this underlying fact (although our partners provide their equipment to us at a
-no-profit price, so the resulting prices drop as low to as 40%).
+no-profit price, so the resulting prices drop as low to as 40%). <a href="www.google.com" >Read More</a>
 <br/><br/>
 <h2>2. Fair Trade</h2>
 Current models of price rice regulation involves a published ‘Average Monthly Rice Price’ document sent
 out by the government each month. However, heavy fluctuations still occur due to the low bargaining
-power farmers have.
+power farmers have. 
 <br/><br/>
 This low bargaining power is based off the lack of information. Mills disclose their buying prices, so
 farmers sell to the mills either because: 1. Their buying prices have been recommended to them through
 word of mouth and 2. Past proven experiences with the mills. But this means that a farmer typically
 know of and have worked with only 2-3 mills in the vicinity. Buyers can simply suggest lower buying prices, and farmers will have to accept it. Our buying-price reporting service allow farmers to evaluate
-their options with information from crowd-reporting.
+their options with information from crowd-reporting. <a href="www.google.com" >Read More</a>
 <br/><br/>
 
 <h2>3. Income Expansion</h2>
@@ -103,10 +107,7 @@ monetary support. On the other hand, for farmers who have inherited larger plots
 enough to live, but to financially grow, they need larger plots.
 We strive to change agricultural practices to those like in Japan, where farmers operate huge plots. We
 at RaiLink are currently developing a land-leasing platform where contracts can be made and stored
-with a smart-contract.                    </p>
-                    <h5 className="subtitle">Pun Suppakit Waiwitlikhit</h5>
-                    <br/>
-                    <img width="100%" src={require("./IMG_20200901_122603 (1).jpg")}></img>
+with a smart-contract. <a href="www.google.com" >Read More</a>                   </p>
                         <Row>
                     </Row>
                 </Container>

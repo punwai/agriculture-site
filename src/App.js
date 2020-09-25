@@ -1,5 +1,4 @@
 import React, { Component, FC, useState, useEffect, useCallback, useRouteMatch } from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import {
   BrowserRouter as Router,
@@ -16,13 +15,15 @@ import Basket from './components/Basket/Basket';
 import ItemPage from './components/ItemPage/ItemPage';
 import Mills from './components/Mills/Mills';
 import TimeShare from './components/TimeShare/TimeShare';
+import Partners from './components/Partners/Partners';
 import Order from './components/Order/Order';
+import Contact from './components/Contact/Contact';
 import SecretAdmin from './components/SecretAdmin/SecretAdmin';
 import { auth, db } from 'firebase'
 import UserProvider from "./providers/UserProvider";
 import { UserContext } from "./providers/UserProvider";
 
-import RailinkLogo from './RaiLink.svg';
+import RailinkLogo from './static/RaiLink.svg';
 import LoginCallback from './components/LoginCallback/LoginCallback';
 import { CookiesProvider } from 'react-cookie';
 import { instanceOf } from 'prop-types';
@@ -57,8 +58,24 @@ class App extends Component {
   constructor(props) {
       super(props);
       this.state = {
+        show: false,
+        show2: false
       };
   }
+
+  showDropdown = (e)=>{
+    this.setState({ show: true });
+  }
+  hideDropdown = e => {
+      this.setState({ show: false });
+  }
+  showDropdown2 = (e)=>{
+    this.setState({ show2: true });
+  }
+  hideDropdown2 = e => {
+      this.setState({ show2: false });
+  }
+
   
   componentDidMount() {
   }
@@ -87,16 +104,24 @@ class App extends Component {
                   <Navbar.Toggle style={{border: "none"}} aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav fill className="mr-auto">
-                      <NavDropdown title="เกี่ยวกับ" id="basic-nav-dropdown">
+                      <Nav.Link href="/">หน้าหลัก</Nav.Link>
+                      <NavDropdown title="เกี่ยวกับ" className="nav-dropdown" show={this.state.show} onMouseEnter={this.showDropdown} onMouseLeave={this.hideDropdown}>
                         <NavDropdown.Item href="/fromthefounder">จากใจของทีม</NavDropdown.Item>
-                        <NavDropdown.Item href="/model">Strategic Goals</NavDropdown.Item>
-                        <NavDropdown.Item href="/partners">Partnerships</NavDropdown.Item>
+                        <NavDropdown.Item href="/model">แผนการ</NavDropdown.Item>
+                        <NavDropdown.Item href="/partners">ร่วมงาน</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
+                        <NavDropdown.Item href="/contact">ติดต่อ</NavDropdown.Item>
+                      </NavDropdown>
+                      <NavDropdown title="นโยบาย" className="nav-dropdown" show={this.state.show2} onMouseEnter={this.showDropdown2} onMouseLeave={this.hideDropdown2}>
+                        <NavDropdown.Item href="/fromthefounder">FAQ คำถามที่พบบ่อย</NavDropdown.Item>
+                        <NavDropdown.Item href="/model">นโยบายคืนเงิน</NavDropdown.Item>
+                        <NavDropdown.Item href="/partners">นโยบายสั่งของ</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="/contact">ติดต่อ</NavDropdown.Item>
                       </NavDropdown>
                       <Nav.Link href="/features">ข่าวสาร</Nav.Link>
-                      <Nav.Link href="/partner">ร่วมงาน</Nav.Link>
                       <Nav.Link href="/timeshare">ไทม์แชร์</Nav.Link>
+                      <Nav.Link href="/mills">ราคาข้าว</Nav.Link>
                     </Nav>
                     <Nav fill className="ml-auto">
                       <Nav.Link href="/basket"><Button variant="success">
@@ -144,6 +169,15 @@ class App extends Component {
                 <Route path="/timeshare">
                   <TimeShare/>
                 </Route>
+                <Route path="/partners">
+                  <Partners/>
+                </Route>
+                <Route path="/contact">
+                  <Contact/>
+                </Route>
+                <Route path="/blog">
+                  <Partners/>
+                </Route>
                 <Route path="/item/:id">
                   <ItemPage/>
                 </Route>
@@ -165,6 +199,62 @@ class App extends Component {
               </Switch>
           </div>
         </Router>
+
+        <footer class="container-fluid bg-grey py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-6 ">
+                    <div class="logo-part">
+                        <img src={require("./static/RaiLink.svg")} class="w-50 logo-footer"/>
+                        <p>We promote sustainable, incremental developments to the agricultural sector
+                          especially in the areas of commerce and automation technologies. <br/><br/>
+                          - Khaw Donsawat, Founding member
+                        </p>
+                        <p>© 2019 by The RaiLink Initiative </p>
+                    </div>
+                  </div>
+                  <div class="col-md-6 px-4">
+                    <h6>Ordering, Service or Maintenance Issues?</h6>
+                    <p>Please note that contact through our LINE OFFICIAL ACCOUNT will be the fastest</p>
+                    <p><span className="bold-span">Email:</span> railink@gmail.com</p>
+                    <p><span className="bold-span">Phone:</span> 02-867-1215</p>
+                    <p><span className="bold-span">LINE:</span> @railink</p>
+                    <a href="#" class="btn-footer"> Contact Us</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 px-4">
+                      <div class="row ">
+                          <div class="col-md-6">
+                            <ul>
+                                <li> <a href="/"> Home</a> </li>
+                                <li> <a href="/fromthefounder"> About</a> </li>
+                                <li> <a href="/model"> Strategic Aims</a> </li>
+                                <li> <a href="/service"> Services</a> </li>
+                                <li> <a href="/fromthefounder"> Team</a> </li>
+                                <li> <a href="#"> Contact</a> </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6 px-4">
+                            <ul>
+                                <li> <a href="/timeshare"> Timeshare</a> </li>
+                                <li> <a href="/mills"> Rice price</a> </li>
+                                <li> <a href="#"> Policy</a> </li>
+                                <li> <a href="#"> Refunds</a> </li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
 
           <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
           <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>

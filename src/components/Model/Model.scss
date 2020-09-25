@@ -41,6 +41,14 @@
   font-size: 24px !important;
 }
 
+.inside-text {
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0,0,0,.6);
+  font-weight: 400;
+  padding-top: 200px;
+  font-size: 60px;
+}
+
 .tractor {
   position: absolute;
   top: -200px;
@@ -50,6 +58,9 @@
   width: auto;
 }
 
+.model-container {
+    background-image: url('1600770004988.jpg');
+}
 p {
   color: #444444;
 }

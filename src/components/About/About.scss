@@ -16,6 +16,28 @@
   margin-left:-20px !important;
 }
 
+.green-container {
+  background: #8cbf62;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.small-container {
+  max-width: 700px !important;
+}
+
+.about-container {
+  background-image: url('IMG_20200901_121956.jpg');
+}
+
+.image-container {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
 .specialContainer {
   margin-left: -100px;
   margin-right: -100px;
