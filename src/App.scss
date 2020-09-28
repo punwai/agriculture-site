@@ -36,9 +36,6 @@ body {
   color: white;
 }
 
-#basic-navbar-nav {
-  background-color: white !important;
-}
 
 .custom-navbar {
   position: relative;
@@ -139,7 +136,7 @@ body {
   font-weight: 600;
 }
 
-.dropdown-item:hover {
+.nav-dropdown > div> a:hover {
   background: green !important;
   font-style: italic !important;
   transition: 0.3s;

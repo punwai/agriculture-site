@@ -98,7 +98,7 @@ export default class Home extends Component {
                         <Row>
 
                             <Col xs={12} sm={12} lg={6} md={6} className="pt-5 align-items-center">
-                                <div className="bannerText pb-3">plookngaimak.com อุปกรณ์เกษตรไทม์แชร์</div>
+                                <div className="bannerText pb-3">railink.co อุปกรณ์เกษตรไทม์แชร์</div>
                                 <div className="bannerDescription pb-3" >RaiLink คือองค์กรเพื่อทำให้ อุปกรณ์เกษตร คุณภาพดี ทันสมัย เข้าถึงชาวเกษตรได้ ด้วยระบบไทม์แชร์ของเรา ใช้อุปกรณ์ในระยะเวลาเท่าที่คุณต้องการ เหมือนเช่าแต่คุ้มเหมือนซื้อเต็มราคา</div>
                                 <div className="bannerDescription pb-5"><Button href="/timeshare" style={{ width: "30%" }} variant="danger">                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
@@ -131,17 +131,24 @@ export default class Home extends Component {
                 <br/>
                 <Container>
                     <h2 className="subtitle">RAILINK TIMESHARE คืออะไร?</h2>
-                    <p>
-                        We at RaiLink are striving to create a society where agricultural practices and ways of lives can co-exist
-                        with the rapidly changing Thai society. We believe that with the right development programs, incentives
-                        and policies, it is not necessary for agricultural families to abandon their home and heritage or abandon
-                        their children to find work in the cities, just to make basic living income.
-                        Empowerment, technology, and sustainability is at the heart of our model, and our work has been
-                        shaped by the words of farmers. As technologist ourselves, we believe Thai agricultural societies could
-                        fundamentally shift through better communication, and implementing a sharing economy system. We
-                        have drawn our inspiration from innovative companies such as Ricult, and will continue to look up
-                        towards such leaders for future development.
-                    </p>
+                    <Row>
+                        <Col xs={12} md={8}>
+                            <p>
+                                We at RaiLink are striving to create a society where agricultural practices and ways of lives can co-exist
+                                with the rapidly changing Thai society. We believe that with the right development programs, incentives
+                                and policies, it is not necessary for agricultural families to abandon their home and heritage or abandon
+                                their children to find work in the cities, just to make basic living income.
+                                Empowerment, technology, and sustainability is at the heart of our model, and our work has been
+                                shaped by the words of farmers. As technologist ourselves, we believe Thai agricultural societies could
+                                fundamentally shift through better communication, and implementing a sharing economy system. We
+                                have drawn our inspiration from innovative companies such as Ricult, and will continue to look up
+                                towards such leaders for future development.
+                            </p>
+                        </Col>
+                        <Col xs={12} md={4}>
+                            <img className="mockupimg" src={require('./mockupimg.png')}/>
+                        </Col>
+                    </Row>
                     <br/><br/>
                     <h2 className="subtitle">เช่าง่าย 4 ขั้น</h2>
                     <br/>

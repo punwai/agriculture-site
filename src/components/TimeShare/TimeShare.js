@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Modal, Navbar, Spinner, Form, FormControl, Button, Container, Row, Col, Card } from 'react-bootstrap';
+import { Nav, Modal, Navbar, Spinner, Form, Dropdown, DropdownButton, FormControl, Button, Container, Row, Col, Card } from 'react-bootstrap';
 import './TimeShare.scss';
 import { db } from '../../firebase';
 import { withRouter } from "react-router-dom";
@@ -115,12 +115,48 @@ class TimeShare extends Component {
                     <div>
                     <br></br>
                     <Container className="ts-container">
-                        <h2 className="subtitle" style={{ fontSize: "24px" }}>สินค้ารายการใหม่ <span style={{ color: "grey"}}>( {this.state.itemsList.length} รายการ )</span> </h2> 
-                        <Button variant="success" style={{ fontSize: "14px", width:"100%" }} width="100%">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-                            </svg>&nbsp;ชมดูตะกร้า (2)
-                        </Button>
+
+                        <h2 className="subtitle" style={{ fontSize: "24px" }}>CATALOGUE สินค้าไทม์แชร์ </h2>
+
+                        <Row>
+                            <Col xs={10} sm={11}>
+                                <FormControl type="text" placeholder="Search" className="mr-sm-2 mb-2" />
+                            </Col>
+                            <Col xs={2} sm={1} className="pl-0 m-0 searchwrap">
+                                <Button variant="outline-success" className="search-btn"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                </svg>
+                                </Button>
+                            </Col>
+                        </Row>
+
+                        <div className='p-3 filterBox'>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-funnel" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+</svg> คัดเลือก
+: &nbsp; &nbsp;
+                            <span>
+                                <DropdownButton className="sortDrop" id="dropdown-item-button" title="ราคา">
+                                <Dropdown.Item as="button">ราคา: สูงสุดถึงต่ำสุด</Dropdown.Item>
+                                <Dropdown.Item as="button">ราคา: ต่ำสุดถึงสูงสุด</Dropdown.Item>
+                                </DropdownButton>
+                                &nbsp;&nbsp;
+                                <DropdownButton className="sortDrop" id="dropdown-item-button" title="ยี่ห้อ">
+                                <Dropdown.Item as="makit">MAKITA</Dropdown.Item>
+                                <Dropdown.Item as="button">POLO</Dropdown.Item>
+                                <Dropdown.Item as="button">EBARA</Dropdown.Item>
+                                <Dropdown.Item as="button">FRANKLIN ELECTRIC</Dropdown.Item>
+                                </DropdownButton>
+                            </span>                  
+                        </div>
+
+                        <div className="divider"></div>
+                        
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tools" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z"/>
+  <path fill-rule="evenodd" d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+</svg> สินค้าทั้งหมดที่คัดกรอง <span style={{ color: "grey"}}>( {this.state.itemsList.length} รายการ )</span>
                         <Row className="m-0">
                             { this.state.itemsList.map((item, index) =>
                                 <Col xs={6} sm={4} md={4} lg={3} className="p-1">
@@ -148,14 +184,14 @@ class TimeShare extends Component {
                                                 </div>
 
                                                 { this.props.basket.findIndex(el => el.item.id == item.id) == -1 ? 
-                                                    <Button className="p-1 mr-auto" style={{ fontSize: "12px"}} variant="danger" onClick={this.addToCart.bind(this,index)}>
+                                                    <Button className="mr-1 mb-1 p-1" style={{ fontSize: "12px"}} variant="danger" onClick={this.addToCart.bind(this,index)}>
                                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3 top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
                                                         </svg>
                                                         &nbsp;
                                                         เพิ่มลงตะกร้า
                                                     </Button> :
-                                                    <Button className="p-1 mr-auto" style={{ fontSize: "12px"}} variant="warning" onClick={this.removeFromCart.bind(this,index)}>
+                                                    <Button className="mr-1 mb-1 p-1" style={{ fontSize: "12px"}} variant="warning" onClick={this.removeFromCart.bind(this,index)}>
                                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3 top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
                                                         </svg>
@@ -163,6 +199,12 @@ class TimeShare extends Component {
                                                         ออกจากตะกร้า
                                                     </Button>
                                                 }
+
+                                
+                                                    <Button className="p-1 mb-1" style={{ fontSize: "12px"}} variant="success">
+                                                        ...
+                                                        เพิ่มเติม
+                                                    </Button>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>

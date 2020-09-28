@@ -67,7 +67,7 @@ class Basket extends Component {
                                     { basketItem.item.name }
                                 </td>
                                 <td md={4}>
-                                    ฿{ basketItem.item.price_discount }
+                                    ฿{ basketItem.item.price_discount } / 4 เดือน 4 ปี
                                 </td>
                                 <td>
                                     <Button onClick={this.removeOrder.bind(this, basketItem)} className="p-1 mr-auto" style={{ fontSize: "12px"}} variant="danger">

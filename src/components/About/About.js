@@ -90,32 +90,29 @@ export default class About extends Component {
                     <br/>
                     <Row>
                       <Col md={6} lg={5}>
-                      <img width="100%" src={require("./1600769328686.jpg")}></img>
+                      <img width="100%" src={require("./1600769328686.jpg")}></img><br/><br/>
                       </Col>
                       <Col md={6} lg={7}>
-                      In this photo is Khaw and I. In my mouth is the greatest, sweetest longbean in the world, organically-grown locally in our beautiful province of Saraburi.
+                        In this photo is Khaw and I. In my mouth is the greatest, sweetest longbean in the world, organically-grown locally in our beautiful province of Saraburi.
                         Thai agriculture feeds Thai people, but Thai farmers are amongst the poorest in the world.
                         Since perhaps 12, working with me on the floor of my family's warehouse have always been former farmers, including Khaw. Our country's lack of investment 
-                        into the agricultural industry have led to a situation where Khaw and my fellow co-workers are forced down to Bangkok to find sufficient income for their families.
-                        <br/>
-                        <br/>
+                        into the agricultural industry have led to a situation where Khaw and fellow co-workers are forced down to Bangkok to find sufficient income for their families.
                         After a discussion with Khaw about his family's farming practices led me to realize that we need to change our archaic agricultural
-                        industry. Farmers shouldn't need to abandon their homes to escape poverty. Japan has done it, Korea has done it, the USA has done it, Thailand can do it. Hence, we started RaiLink together<br/><br/>
-                        - Suppakit
+                        industry.
+                        <br/><br/>
                       </Col>
                       <Col md={0} lg={3}></Col>
                     </Row>
+                      As a mechanic, Khao now works part-time dealing with repairs in Bangkok and Isaan, while I am honored to lead the technology and operations team. Through our experience,
+                      we have discovered that time-sharing is the tip of the iceberg, and our goal is far from reach, farmers are still limited by their tiny, inherited lands which can never
+                      provide sufficient income regardless of how much is grown, we need to create change not only in the practices but the underlying system in land ownership and commerce.
+                      Farmers shouldn't need to abandon their homes to escape poverty.<br/><br/>
+                        - Pun Suppakit
+                      <br/>
+                      <br/>
                     <h5 className="subtitle">Our Strategy</h5>
                     <p>
-                    In this photo is Khaw and I. In my mouth is the greatest, sweetest longbean in the world, organically-grown locally in our beautiful province of Saraburi.
-                        Thai agriculture feeds Thai people, but Thai farmers are amongst the poorest in the world.
-                        Since perhaps 12, working with me on the floor of my family's warehouse have always been former farmers, including Khaw. Our country's lack of investment 
-                        into the agricultural industry have led to a situation where Khaw and my fellow co-workers are forced down to Bangkok to find sufficient income for their families.
-                        <br/>
-                        <br/>
-                        After a discussion with Khaw about his family's farming practices led me to realize that we need to change our archaic agricultural
-                        industry. Farmers shouldn't need to abandon their homes to escape poverty. Japan has done it, Korea has done it, the USA has done it, Thailand can do it. Hence, we started RaiLink together<br/><br/>
-                        - Suppakit
+                      Insert Diagram
                     </p>
                     <br/><br/>
                     <Row>

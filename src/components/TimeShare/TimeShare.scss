@@ -33,6 +33,45 @@
   left: 0;
 }
 
+.sortDrop {
+  display: inline;
+}
+
+.sortDrop > button {
+  background: white !important;
+  color: grey !important;
+  border-color: #AAAAAA !important;
+  padding: 3px 15px 3px 15px;
+  width: 150px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.searchwrap {
+  padding-bottom:.5rem!important;
+}
+
+.form-control {
+  font-size: .9rem!important;
+}
+.search-btn {
+  width: 100%;
+  font-size: 13px !important;
+  height: 100%;
+}
+
+.sortDrop > div {
+  background: white !important;
+  color: grey !important;
+  border-color: #AAAAAA !important;
+  font-size: 12px;
+}
+
+
+.filterBox {
+  background: #EEEEEE;
+}
+
 .hoverable:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transition: 0.5s;

@@ -119,7 +119,7 @@ class App extends Component {
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="/contact">ติดต่อ</NavDropdown.Item>
                       </NavDropdown>
-                      <Nav.Link href="/features">ข่าวสาร</Nav.Link>
+                      {/* <Nav.Link href="/features">ข่าวสาร</Nav.Link> */}
                       <Nav.Link href="/timeshare">ไทม์แชร์</Nav.Link>
                       <Nav.Link href="/mills">ราคาข้าว</Nav.Link>
                     </Nav>
