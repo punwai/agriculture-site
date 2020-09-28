@@ -92,8 +92,7 @@ export default class Home extends Component {
             <div>
                 <div className="home-container">
                     <img class="svg" src={require("./back.svg")} alt="Kiwi standing on oval"/>
-                </div>
-                <div className="overlay-text">
+                    <div className="overlay-text">
                     <Container className="pt-5 pb-5">
                         <Row>
 
@@ -106,6 +105,7 @@ export default class Home extends Component {
                             </Col>
                         </Row>
                     </Container>
+                </div>
                 </div>
                 {/* <br/>
                 <br/>
