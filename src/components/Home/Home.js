@@ -134,15 +134,8 @@ export default class Home extends Component {
                     <Row>
                         <Col xs={12} md={8}>
                             <p>
-                                We at RaiLink are striving to create a society where agricultural practices and ways of lives can co-exist
-                                with the rapidly changing Thai society. We believe that with the right development programs, incentives
-                                and policies, it is not necessary for agricultural families to abandon their home and heritage or abandon
-                                their children to find work in the cities, just to make basic living income.
-                                Empowerment, technology, and sustainability is at the heart of our model, and our work has been
-                                shaped by the words of farmers. As technologist ourselves, we believe Thai agricultural societies could
-                                fundamentally shift through better communication, and implementing a sharing economy system. We
-                                have drawn our inspiration from innovative companies such as Ricult, and will continue to look up
-                                towards such leaders for future development.
+                            พวกเราที่ RaiLink มุ่งมั่นที่จะสร้างสังคมที่วิถีเกษตรและวิถีชีวิตสามารถดำรงอยู่ร่วมกับสังคมไทยที่เปลี่ยนแปลงอย่างรวดเร็ว ด้วยระบบ TIMESHARE ของเราคุณสามารถแบ่งเวลาการใช้อัปกรณ์และราคาการซื้อกับ ผู้ที่อยู่ในตำบลหรือหมู้บ้านเดียวกันได้ เราจะเป็นตัวกลางในการแบ่ง
+                            เวลาทำให้ท่านหมดห่วงเรื่องการขัดแย้งระหว่างผู้ใช้ท่านอื่น
                             </p>
                         </Col>
                         <Col xs={12} md={4}>
