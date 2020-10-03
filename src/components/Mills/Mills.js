@@ -135,31 +135,33 @@ class Mills extends Component {
                         <Row className="m-0">
                             <div className="divider"></div>
                             { this.state.millsList.map((item, index) =>
-                                <Col xs={12}>
-                                    <Row>
-                                        <Col xs={6} sm={4} md={4} lg={4}>
-                                            <img width="100%" src={require("./no-image-available.jpg")} />
-                                        </Col>
-                                        <Col>
-                                            <div style={{ fontSize: "20px", fontWeight: '550' }}>
-                                                { item.name }
-                                            </div>
-                                            <div style={{ fontSize: "14px"}}>
-                                                { item.address }
-                                            </div>
-                                            {/* <div style={{ fontSize: "15px"}}>
-                                                Average Buy Price: { item.avg_price } 
-                                            </div> */}
-                                            <div>Reported Average price per 100 Kilograms:</div>
-                                            { item.rice_info.map((rice_type, rice_index) => 
-                                                <div>{rice_type.name}: THB{rice_type.avg} </div>
-                                            )
-                                            }
-                                            <a href={"/mill/" + item.id}> More Info </a>
-                                        </Col>
-                                        <div className="divider"></div>
-                                    </Row>
-                                </Col>
+                                <div>
+                                    <Col xs={12} className="expand-hover border-round">
+                                        <Row>
+                                            <Col xs={6} sm={4} md={4} lg={4}>
+                                                <img width="100%" src={require("./no-image-available.jpg")} />
+                                            </Col>
+                                            <Col>
+                                                <div style={{ fontSize: "20px", fontWeight: '550' }}>
+                                                    { item.name }
+                                                </div>
+                                                <div style={{ fontSize: "14px"}}>
+                                                    { item.address }
+                                                </div>
+                                                {/* <div style={{ fontSize: "15px"}}>
+                                                    Average Buy Price: { item.avg_price } 
+                                                </div> */}
+                                                <div>Reported Average price per 100 Kilograms:</div>
+                                                { item.rice_info.map((rice_type, rice_index) => 
+                                                    <div>{rice_type.name}: THB{rice_type.avg} </div>
+                                                )
+                                                }
+                                                <a href={"/mill/" + item.id}> More Info </a>
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                    <div className="divider"></div>
+                                </div>
                                 )
                             }
                         </Row>

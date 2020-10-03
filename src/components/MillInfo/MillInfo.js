@@ -71,7 +71,8 @@ import { withRouter } from 'react-router-dom';
                     <div className="name"><b>ชื่อโรงสี:</b> {this.state.mill.name}</div>
                     <div><b>ที่อยู่:</b> {this.state.mill.address}</div>
                     <div><b>จังหวัด:</b> {this.state.mill.province}</div>
-                    <div>CONTACT:</div>
+                    <br/>
+                    <div><b>ติดต่อ</b></div>
                     <div><b>ชื่อโรงสี:</b> {this.state.mill.phone}</div>
                     <div><b>ชื่อโรงสี:</b> {this.state.mill.line_id}</div>
                     <br></br>
