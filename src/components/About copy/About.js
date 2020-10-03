@@ -64,7 +64,7 @@ export default class About extends Component {
                     <br/>
                     <h1 style={{ fontWeight: "700"}} className="">From The Founder</h1>
                     <p className="subdescription">
-                        We at RaiLink are striving to create a society where agricultural practices and ways of lives can co-exist
+                        We at DinRai are striving to create a society where agricultural practices and ways of lives can co-exist
                         with the rapidly changing Thai society. We believe that with the right development programs, incentives
                         and policies, it is not necessary for agricultural families to abandon their home and heritage or abandon
                         their children to find work in the cities, just to make basic living income.

@@ -77,11 +77,11 @@ export default class Partners extends Component {
                         </Col>
                     </Row>
                     <br/>
-                    <h2>LaanRai runs off <i>your help</i> </h2>
+                    <h2>DinRai runs off <i>your help</i> </h2>
                     <p>
                       Any form of sustainable model involves a marriage between the existing industry with novel ideas. As a non-profit, we have designed our
                       model to be nearly independent from any kind of active donations. We only require around 10% of donations to deal with
-                      emergencies such as unaccounted maintenance costs or extra shipping costs - essentially buffer assets to ensure LaanRai does not suddenly
+                      emergencies such as unaccounted maintenance costs or extra shipping costs - essentially buffer assets to ensure DinRai does not suddenly
                       collapse. This is only achievable through partnerships in many aspects - from supplying products at lower-than-market prices,
                       country-wide low-cost shipping, and maintenance at their service stations.
                     </p>

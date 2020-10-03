@@ -86,7 +86,7 @@ export default class Partners extends Component {
                       <b>Organization Tel:</b> +6681-711-1115
                     </p>
                     <p>
-                      <b>Email:</b> laanrai@gmail.com
+                      <b>Email:</b> dinrai@gmail.com
                     </p>
                         <Row>
                     </Row>

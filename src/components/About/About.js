@@ -68,7 +68,7 @@ export default class About extends Component {
                     <br/>
                     <h3>It's <i>time</i> for our beloved Thai agriculture to change</h3>
                     <p className="normal-text">
-                        We at LaanRai are striving to create a society where agricultural practices and ways of lives can co-exist
+                        We at DinRai are striving to create a society where agricultural practices and ways of lives can co-exist
                         with the rapidly changing Thai society. We believe that with the right development programs, incentives
                         and policies, it is not necessary for agricultural families to abandon their home and heritage or abandon
                         their children to find work in the cities, just to make basic living income.

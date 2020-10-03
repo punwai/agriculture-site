@@ -28,7 +28,7 @@ import UserProvider from "./providers/UserProvider";
 import { UserContext } from "./providers/UserProvider";
 import { withTranslation } from "react-i18next";
 
-import RailinkLogo from './static/RaiLink.svg';
+import RailinkLogo from './static/DinRai.svg';
 import LoginCallback from './components/LoginCallback/LoginCallback';
 import { CookiesProvider } from 'react-cookie';
 import { instanceOf } from 'prop-types';
@@ -227,20 +227,20 @@ class App extends Component {
                 <div class="row">
                   <div class="col-md-6 ">
                     <div class="logo-part">
-                        <img src={require("./static/RaiLink.svg")} class="w-50 logo-footer"/>
+                        <img src={require("./static/DinRai.svg")} class="w-50 logo-footer"/>
                         <p>We promote sustainable, incremental developments to the agricultural sector
                           especially in the areas of commerce and automation technologies. <br/><br/>
                           - Khaw Donsawat, Founding member
                         </p>
-                        <p>© 2019 by The LaanRai Initiative </p>
+                        <p>© 2019 by DinRai Agriculture </p>
                     </div>
                   </div>
                   <div class="col-md-6 px-4">
                     <h6>Ordering, Service or Maintenance Issues?</h6>
                     <p>Please note that contact through our LINE OFFICIAL ACCOUNT will be the fastest</p>
-                    <p><span className="bold-span">Email:</span> laanrai@gmail.com</p>
+                    <p><span className="bold-span">Email:</span> dinrai@gmail.com</p>
                     <p><span className="bold-span">Phone:</span> 02-867-1215</p>
-                    <p><span className="bold-span">LINE:</span> @laanrai</p>
+                    <p><span className="bold-span">LINE:</span> @dinrai</p>
                     <a href="#" class="btn-footer"> Contact Us</a>
                   </div>
                 </div>
