@@ -18,10 +18,14 @@ import TimeShare from './components/TimeShare/TimeShare';
 import Partners from './components/Partners/Partners';
 import Order from './components/Order/Order';
 import Contact from './components/Contact/Contact';
+import LanguageSelector from './components/LanguageSelector/LanguageSelector';
+import AddMill from './components/AddMill/AddMill';
+
 import SecretAdmin from './components/SecretAdmin/SecretAdmin';
 import { auth, db } from 'firebase'
 import UserProvider from "./providers/UserProvider";
 import { UserContext } from "./providers/UserProvider";
+import { withTranslation } from "react-i18next";
 
 import RailinkLogo from './static/RaiLink.svg';
 import LoginCallback from './components/LoginCallback/LoginCallback';
@@ -93,6 +97,8 @@ class App extends Component {
 
   render() {
     console.log(this.props)
+    const { t } = this.props;
+
     return (
       <body>
         <Router>
@@ -104,30 +110,33 @@ class App extends Component {
                   <Navbar.Toggle style={{border: "none"}} aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav fill className="mr-auto">
-                      <Nav.Link href="/">หน้าหลัก</Nav.Link>
-                      <NavDropdown title="เกี่ยวกับ" className="nav-dropdown" show={this.state.show} onMouseEnter={this.showDropdown} onMouseLeave={this.hideDropdown}>
-                        <NavDropdown.Item href="/fromthefounder">จากใจของทีม</NavDropdown.Item>
-                        <NavDropdown.Item href="/model">แผนการ</NavDropdown.Item>
-                        <NavDropdown.Item href="/partners">ร่วมงาน</NavDropdown.Item>
+                      <Nav.Link href="/">{t('home')}</Nav.Link>
+                      <NavDropdown title={t('about')} className="nav-dropdown" show={this.state.show} onMouseEnter={this.showDropdown} onMouseLeave={this.hideDropdown}>
+                        <NavDropdown.Item href="/fromthefounder">{t('fromtheteam')}</NavDropdown.Item>
+                        <NavDropdown.Item href="/model">{t('strategicaims')}</NavDropdown.Item>
+                        <NavDropdown.Item href="/partners">{t('partners')}</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/contact">ติดต่อ</NavDropdown.Item>
+                        <NavDropdown.Item href="/contact">{t('contact')}</NavDropdown.Item>
                       </NavDropdown>
-                      <NavDropdown title="นโยบาย" className="nav-dropdown" show={this.state.show2} onMouseEnter={this.showDropdown2} onMouseLeave={this.hideDropdown2}>
-                        <NavDropdown.Item href="/fromthefounder">FAQ คำถามที่พบบ่อย</NavDropdown.Item>
-                        <NavDropdown.Item href="/model">นโยบายคืนเงิน</NavDropdown.Item>
-                        <NavDropdown.Item href="/partners">นโยบายสั่งของ</NavDropdown.Item>
+                      <NavDropdown title={t('policy')} className="nav-dropdown" show={this.state.show2} onMouseEnter={this.showDropdown2} onMouseLeave={this.hideDropdown2}>
+                        <NavDropdown.Item href="/fromthefounder">{t('FAQ')}</NavDropdown.Item>
+                        <NavDropdown.Item href="/model">{t('refund')}</NavDropdown.Item>
+                        <NavDropdown.Item href="/partners">{t('shipping')}</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/contact">ติดต่อ</NavDropdown.Item>
+                        <NavDropdown.Item href="/contact">{t('contact')}</NavDropdown.Item>
                       </NavDropdown>
                       {/* <Nav.Link href="/features">ข่าวสาร</Nav.Link> */}
-                      <Nav.Link href="/timeshare">ไทม์แชร์</Nav.Link>
-                      <Nav.Link href="/mills">ราคาข้าว</Nav.Link>
+                      <Nav.Link href="/timeshare">{t('timeshare')}</Nav.Link>
+                      <Nav.Link href="/mills">{t('riceprice')}</Nav.Link>
                     </Nav>
                     <Nav fill className="ml-auto">
+                      <Nav.Link>
+                        <LanguageSelector/>
+                      </Nav.Link>
                       <Nav.Link href="/basket"><Button variant="success">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-                        </svg>&nbsp;ตะกร้า ({this.props.basket.length})</Button>
+                        </svg>&nbsp;{t('basket')} ({this.props.basket.length})</Button>
                       </Nav.Link>
                       { this.props.user == null ? 
                         <Nav.Link href="/login">
@@ -137,7 +146,7 @@ class App extends Component {
                               <path d="M13.784 14c-.497-1.27-1.988-3-5.784-3s-5.287 1.73-5.784 3h11.568z"/>
                               <path fill-rule="evenodd" d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                             </svg> &nbsp;
-                            เข้าสู่ระบบ
+                            {t('login')}
                           </Button>
                         </Nav.Link>
                          : <Nav.Link><Button variant="danger" onClick={this.signOut}>
@@ -147,7 +156,8 @@ class App extends Component {
                            <path fill-rule="evenodd" d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                          </svg> &nbsp;
                          ออกจากระบบ
-                       </Button></Nav.Link>
+                       </Button>
+                       </Nav.Link>
                       }
                       </Nav>
                   </Navbar.Collapse>
@@ -193,6 +203,9 @@ class App extends Component {
                 <Route path="/mills">
                   <Mills/>
                 </Route>
+                <Route path="/add_mill">
+                  <AddMill/>
+                </Route>
                 <Route path="/">
                   <Home />
                 </Route>
@@ -212,15 +225,15 @@ class App extends Component {
                           especially in the areas of commerce and automation technologies. <br/><br/>
                           - Khaw Donsawat, Founding member
                         </p>
-                        <p>© 2019 by The RaiLink Initiative </p>
+                        <p>© 2019 by The LaanRai Initiative </p>
                     </div>
                   </div>
                   <div class="col-md-6 px-4">
                     <h6>Ordering, Service or Maintenance Issues?</h6>
                     <p>Please note that contact through our LINE OFFICIAL ACCOUNT will be the fastest</p>
-                    <p><span className="bold-span">Email:</span> railink@gmail.com</p>
+                    <p><span className="bold-span">Email:</span> laanrai@gmail.com</p>
                     <p><span className="bold-span">Phone:</span> 02-867-1215</p>
-                    <p><span className="bold-span">LINE:</span> @railink</p>
+                    <p><span className="bold-span">LINE:</span> @laanrai</p>
                     <a href="#" class="btn-footer"> Contact Us</a>
                   </div>
                 </div>
@@ -269,4 +282,4 @@ function mapStateToProps(state) {
   return { basket: state.basket, user: state.user }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(withTranslation()(App));

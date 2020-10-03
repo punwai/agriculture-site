@@ -124,7 +124,7 @@ class Mills extends Component {
                         <Row className="m-0">
                             <div className="divider"></div>
                             { this.state.millsList.map((item, index) =>
-                                <Col>
+                                <Col xs={12}>
                                     <Row>
                                         <Col xs={6} sm={4} md={4} lg={4}>
                                             <img width="100%" src={require("./no-image-available.jpg")} />
@@ -133,14 +133,17 @@ class Mills extends Component {
                                             <div style={{ fontSize: "20px", fontWeight: '550' }}>
                                                 { item.name }
                                             </div>
-                                            <div style={{ fontSize: "12px"}}>
+                                            <div style={{ fontSize: "14px"}}>
                                                 { item.address }
                                             </div>
-                                            { item.description } 
-                                            <br/> Average Buy Price: { item.avg_price } 
-                                            <br/> RaiLink Metric: { item.user_ratings.length } 
-                                            <br/> Total Price Reports: { item.user_ratings.length }
-                                            <br/>
+                                            {/* <div style={{ fontSize: "15px"}}>
+                                                Average Buy Price: { item.avg_price } 
+                                            </div> */}
+                                            <div>Buying:</div>
+                                            <div>Thai Hom Mali Rice: 14000 (1 report)</div>
+                                            <div>Keaw Ngoo: 14000 (1 report)</div>
+                                            <div>Glutinous Rice: 14000 (1 report)</div>
+                                            <div>Broken Rice: 3000 (1 report)</div>
                                             <a href="/"> More Info </a>
                                         </Col>
                                         <div className="divider"></div>
@@ -151,7 +154,7 @@ class Mills extends Component {
                         </Row>
                         มีข้อมูลใหม่? ถ้าหากคุณไม่สามารถค้นหาโรงสีที่ว่านั้นโปรดเติมข้อมูลเพื่อผลประโยชของสังคมคนเกี่ยวข้าว &nbsp;
                         <div>
-                            <Button variant="danger">เพิ่มข้อมูล</Button>
+                            <a href="/add_mill"><Button variant="danger">เพิ่มข้อมูล</Button></a>
                         </div>
                         <br/>
                         <br/>

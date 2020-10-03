@@ -106,7 +106,7 @@ Many move out to work full-time city jobs, or rely on family members living in t
 monetary support. On the other hand, for farmers who have inherited larger plots, their income is high
 enough to live, but to financially grow, they need larger plots.
 We strive to change agricultural practices to those like in Japan, where farmers operate huge plots. We
-at RaiLink are currently developing a land-leasing platform where contracts can be made and stored
+at LaanRai are currently developing a land-leasing platform where contracts can be made and stored
 with a smart-contract. <a href="www.google.com" >Read More</a>                   </p>
                         <Row>
                     </Row>

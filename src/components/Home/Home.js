@@ -7,12 +7,13 @@ import Graphics3 from './graphics3.svg';
 import Graphics4 from './graphics4.svg';
 import Slider from "react-slick";
 import { db } from '../../firebase';
+import { withTranslation } from "react-i18next";
 
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default class Home extends Component {
+class Home extends Component {
 
     constructor(props) {
         super(props)
@@ -54,6 +55,7 @@ export default class Home extends Component {
     }
 
     render() {
+        const { t } = this.props;
         var settings = {
             dots: true,
             infinite: true,
@@ -96,12 +98,12 @@ export default class Home extends Component {
                     <Container className="pt-5 pb-5">
                         <Row>
 
-                            <Col xs={12} sm={12} lg={6} md={6} className="pt-5 align-items-center">
-                                <div className="bannerText pb-3">railink.co อุปกรณ์เกษตรไทม์แชร์</div>
-                                <div className="bannerDescription pb-3" >RaiLink คือองค์กรเพื่อทำให้ อุปกรณ์เกษตร คุณภาพดี ทันสมัย เข้าถึงชาวเกษตรได้ ด้วยระบบไทม์แชร์ของเรา ใช้อุปกรณ์ในระยะเวลาเท่าที่คุณต้องการ เหมือนเช่าแต่คุ้มเหมือนซื้อเต็มราคา</div>
+                            <Col xs={12} sm={12} lg={8} md={12} className="pt-5 align-items-center">
+                                <div className="bannerText pb-3">{t('dash')}</div>
+                                <div className="bannerDescription pb-3" >{t('dashdesc')}</div>
                                 <div className="bannerDescription pb-5"><Button href="/timeshare" style={{ width: "30%" }} variant="danger">                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-                        </svg>&nbsp;&nbsp;สั่งเลย!</Button></div>
+                        </svg>&nbsp;&nbsp;{t('order')}!</Button></div>
                             </Col>
                         </Row>
                     </Container>
@@ -130,12 +132,11 @@ export default class Home extends Component {
                 <br/>
                 <br/>
                 <Container>
-                    <h2 className="subtitle">RAILINK TIMESHARE คืออะไร?</h2>
+                    <h2 className="subtitle">{t('whatis')}</h2>
                     <Row>
                         <Col xs={12} md={8}>
                             <p>
-                            พวกเราที่ RaiLink มุ่งมั่นที่จะสร้างสังคมที่วิถีเกษตรและวิถีชีวิตสามารถดำรงอยู่ร่วมกับสังคมไทยที่เปลี่ยนแปลงอย่างรวดเร็ว ด้วยระบบ TIMESHARE ของเราคุณสามารถแบ่งเวลาการใช้อัปกรณ์และราคาการซื้อกับ ผู้ที่อยู่ในตำบลหรือหมู้บ้านเดียวกันได้ เราจะเป็นตัวกลางในการแบ่ง
-                            เวลาทำให้ท่านหมดห่วงเรื่องการขัดแย้งระหว่างผู้ใช้ท่านอื่น
+                            {t('whatisdesc')}
                             </p>
                         </Col>
                         <Col xs={12} md={4}>
@@ -143,31 +144,31 @@ export default class Home extends Component {
                         </Col>
                     </Row>
                     <br/><br/>
-                    <h2 className="subtitle">เช่าง่าย 4 ขั้น</h2>
+                    <h2 className="subtitle">{t('easyrent')}</h2>
                     <br/>
                     <Row>
                         <Col className="text-center pb-3" xs={6} md={3}><img src={Graphics1} className="img-main" alt="React Logo" width="100%"/>
-                            <h3 className="text-center mt-4 title-info">สั่ง</h3>
-                            <div className="text-center mt-4">สั่งสินค้าจากเวบ สามารถเลือกจากสินค้าแบรนด์ต่างๆ เช่น Makita, Polo, Ebara ได้ และมีเครื่องมือสำหรับหลายสายงานเช่นการปลูกข้าว ผัก หรือผลไม้</div>
+                            <h3 className="text-center mt-4 title-info">{t('browse')}</h3>
+                            <div className="text-center mt-4">{t('browsedesc')}</div>
                         </Col>
                         <Col className="text-center pb-3" xs={6} md={3}><img className="img-main" src={Graphics4} alt="React Logo" width="100%"/>
-                            <h3 className="text-center mt-4 title-info">จอง</h3>
-                            <div className="text-center mt-4">จองสินค้าในเดือนที่คุณต้องการในช่วงปี จองได้จาก 2 เดือนต่อปีถึง 6 เดือนต่อปี!</div>
+                            <h3 className="text-center mt-4 title-info">{t('book')}</h3>
+                            <div className="text-center mt-4">{t('bookdesc')}</div>
                         </Col>
                         <Col className="text-center pb-3" xs={6} md={3}><img className="img-main" src={Graphics3} alt="React Logo" width="100%"/>
-                            <h3 className="text-center mt-4 title-info">ยืนยัน</h3>
-                            <div className="text-center mt-4">ยืนยันโดยการส่งบัตรประชาชนไปให้ทาง LINE OFFICIAL ACCOUNT ของ RaiLink เพื่อยืนยันการสั่งซื้อ ให้เวลาทีม 1 อาทิตย์เพื่อจับคู่อุปกรรณ์ของคุณไปกับผู้จองคนอื่นๆ</div>
+                            <h3 className="text-center mt-4 title-info">{t('confirm')}</h3>
+                            <div className="text-center mt-4">{t('confirmdesc')}</div>
                         </Col>
                         <Col className="text-center pb-3" xs={6} md={3}><img className="img-main" src={Graphics2} alt="React Logo" width="100%"/>
-                            <h3 className="text-center mt-4 title-info">ส่ง</h3>
-                            <div className="text-center mt-4">ของจะส่งภายใน 2 อาทิตย์ผ่านระบบการขนส่งของ KTW เราส่งได้ทั่วภาคกลางและภาคอีสาน</div>
+                            <h3 className="text-center mt-4 title-info">{t('ship')}</h3>
+                            <div className="text-center mt-4">{t('shipdesc')}</div>
                         </Col>
                     </Row>
                     <br/>
                     <br/>
-                    <h2 className="subtitle">สินค้าเข้าใหม่!</h2>
+                    <h2 className="subtitle">{t('newproducts')}</h2>
                     <p>
-                        สินค้าของเรานั้นสามารถนำไปใช้ในงานเกษตรหลายชนิด รวมไปถึงเกษตกรณ์ปลูกผลผักผลไม้ตามฤดูกาล
+                        {t('newproductsdesc')}
                     </p>
                 </Container>
                 <Container>
@@ -207,9 +208,9 @@ export default class Home extends Component {
                     <br/>
                     <br/>
 
-                    <h2 className="subtitle">ผู้ร่วมกิจการ</h2>
+                    <h2 className="subtitle">{t('partnerslong')}</h2>
                     <p className="subdescription">
-                        สิ่งที่เราทำในวันนี้จะเป็นไปไม่ได้ถ้าไม่มีความช่วยเหลือจากสังคมในระดับนี้
+                        {t('partnerslongdesc')}
                     </p>
                     <Row>
                         <Col xs={6} md={3} className="p-5"><img src={require('../../static/ktw-logo.png')} alt="React Logo" width="100%"/>
@@ -227,3 +228,5 @@ export default class Home extends Component {
         )
     }
 }
+
+export default withTranslation()(Home)

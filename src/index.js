@@ -9,6 +9,7 @@ import { Provider } from 'react-redux'
 import basketReducer from './basket'
 import userReducer from './user'
 import { loadState, saveState } from './localStorage'
+import "./i18n";
 
 // const SET_ID = 'ADD_TODO'
 // const UNSET_ID = 'ADD_TODO'
@@ -68,6 +69,7 @@ store.subscribe(() => {
     basket: store.getState().basket
   });
 })
+
 
 ReactDOM.render(
   <React.StrictMode>

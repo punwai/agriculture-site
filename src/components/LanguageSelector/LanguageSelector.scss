@@ -1,0 +1,23 @@
+.inButton{
+    background: none !important;
+    color: black !important;
+    border-color: white !important;
+    display: inline-block !important;
+    padding: .3rem .9rem;
+    margin: .00rem .0rem;
+    border-radius: 5px;
+}
+
+.inButton:hover {
+    background: grey !important;
+    transition: 0.3s;
+}
+
+.inSVG {
+    display: inline-block !important;
+    height: 25px;
+}
+
+.outButton {
+    height: 50px !important;
+}
