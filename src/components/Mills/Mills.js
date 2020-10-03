@@ -22,19 +22,31 @@ class Mills extends Component {
 		.then((data) => {
 			let mills = [];
 			data.forEach((doc) => {
-                let avg = 0
-                for(let i = 0; i < doc.data().user_ratings.length; i++){
-                    avg += doc.data().user_ratings[i].price
+                var rice_prices = []
+                
+                for(let [key, value] of Object.entries(doc.data().rice_info)){
+                    var price_item = {};
+                    price_item.name = value.name;
+                    price_item.id = key;
+                    let avg = 0
+                    var count = 0
+                    for(let [k, val] of Object.entries(value.reviews)){
+                        avg += val
+                        count += 1
+                    }
+                    avg = avg/count;
+                    price_item.avg = avg;
+                    rice_prices.push(price_item);
                 }
+                console.log(rice_prices)
 				mills.push({
                     id: doc.id,
                     address: doc.data().address,
-                    description: doc.data().description,
                     name: doc.data().name,
+                    phone: doc.data().phone,
+                    line_id: doc.data().line_id,
                     province: doc.data().province,
-                    rating: doc.data().rating,
-                    user_ratings: doc.data().user_ratings,
-                    avg_price: Math.round(avg/doc.data().user_ratings.length)
+                    rice_info: rice_prices
 				});
             });
             this.setState({millsList: mills})
@@ -43,7 +55,6 @@ class Mills extends Component {
 			console.error(err);
 		});
         console.log(this.state.millsList)
-
     }
 
     componentDidMount() {
@@ -139,12 +150,12 @@ class Mills extends Component {
                                             {/* <div style={{ fontSize: "15px"}}>
                                                 Average Buy Price: { item.avg_price } 
                                             </div> */}
-                                            <div>Buying:</div>
-                                            <div>Thai Hom Mali Rice: 14000 (1 report)</div>
-                                            <div>Keaw Ngoo: 14000 (1 report)</div>
-                                            <div>Glutinous Rice: 14000 (1 report)</div>
-                                            <div>Broken Rice: 3000 (1 report)</div>
-                                            <a href="/"> More Info </a>
+                                            <div>Reported Average price per 100 Kilograms:</div>
+                                            { item.rice_info.map((rice_type, rice_index) => 
+                                                <div>{rice_type.name}: THB{rice_type.avg} </div>
+                                            )
+                                            }
+                                            <a href={"/mill/" + item.id}> More Info </a>
                                         </Col>
                                         <div className="divider"></div>
                                     </Row>

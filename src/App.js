@@ -14,6 +14,7 @@ import Login from './components/Login/Login';
 import Basket from './components/Basket/Basket';
 import ItemPage from './components/ItemPage/ItemPage';
 import Mills from './components/Mills/Mills';
+import MillInfo from './components/MillInfo/MillInfo';
 import TimeShare from './components/TimeShare/TimeShare';
 import Partners from './components/Partners/Partners';
 import Order from './components/Order/Order';
@@ -202,6 +203,12 @@ class App extends Component {
                 </Route>
                 <Route path="/mills">
                   <Mills/>
+                </Route>
+                <Route path="/mill/:id">
+                  <MillInfo/>
+                </Route>
+                <Route path="/item/:id">
+                  <MillInfo/>
                 </Route>
                 <Route path="/add_mill">
                   <AddMill/>
