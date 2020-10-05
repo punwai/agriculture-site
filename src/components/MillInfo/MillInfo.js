@@ -11,7 +11,8 @@ import { withRouter } from 'react-router-dom';
     super(props)
 
     this.state = {
-        mill: {}
+        mill: {},
+        rice_price: {}
     };
   }
 
@@ -29,9 +30,10 @@ import { withRouter } from 'react-router-dom';
             let avg = 0
             var count = 0
             for(let [k, val] of Object.entries(value.reviews)){
-                avg += val
+                avg += parseInt(val)
                 count += 1
             }
+            console.log(avg)
             avg = avg/count;
             price_item.avg = avg;
             rice_prices.push(price_item);
@@ -55,9 +57,27 @@ import { withRouter } from 'react-router-dom';
   });
   }
 
+  handlePrice = (id, e) => {
+    var price_map = this.state.rice_price;
+    if(e.target.value >= 0 && e.target.value <= 5000) {
+      price_map[id] = e.target.value;
+    }
+    this.setState({rice_price: price_map});
+  }
+
+  submitPrice = (id, e) => {
+
+    var millId = this.props.match.params.id
+    var millsRef = db.collection('mills').doc(millId);
+    millsRef.update({
+      ["rice_info."+id+".reviews."+this.props.user.uid]: this.state.rice_price[id]
+    })
+  }
+
   render() {
     this.getOrder()
     console.log(this.state.mill)
+    console.log(this.props.user)
     return (
             <div>
                 <div className="home-container">
@@ -76,13 +96,14 @@ import { withRouter } from 'react-router-dom';
                     <div><b>ชื่อโรงสี:</b> {this.state.mill.phone}</div>
                     <div><b>ชื่อโรงสี:</b> {this.state.mill.line_id}</div>
                     <br></br>
-                    <div>Reported Average price per 100 Kilograms:</div>
+                    <div>Collective Price Report (Per 100 kg):</div>
                     <Table striped bordered hover size="sm">
                       <thead>
                         <tr>
                           <th>Rice Type</th>
                           <th>Avg Price</th>
-                          <th>Report Price</th>
+                          <th>Your Price</th>
+                          <th></th>
                         </tr>
                       </thead>
                       {
@@ -91,12 +112,17 @@ import { withRouter } from 'react-router-dom';
                         
                           { this.state.mill.rice_info.map((rice_type, rice_index) => 
                             <tr>
-                            <td>{rice_type.name}</td> 
-                            <td>THB{rice_type.avg}</td>
-                            <td></td>
+                              <td style={{fontSize: "12px"}}><b>{rice_type.name}</b></td> 
+                              <td style={{fontSize: "12px"}}>THB{rice_type.avg}</td>
+                              <td>
+                                <Form.Control value={this.state.rice_price[rice_type.id]} onChange={this.handlePrice.bind(this, rice_type.id)}  type="number"  placeholder="ราคา 100 กก."/>
+                              </td>
+                              <td>
+                                <Button variant="success" onClick={this.submitPrice.bind(this, rice_type.id)} className="btn-sm">Report</Button>
+                              </td>
                             </tr>
                           )
-                        }
+                          }
                     </tbody>
                     }
                     </Table>
@@ -108,4 +134,9 @@ import { withRouter } from 'react-router-dom';
     }
 }
 
-export default withRouter(Home)
+
+function mapStateToProps(state) {
+  return { basket: state.basket, user: state.user }
+}
+
+export default connect(mapStateToProps)(withRouter(Home));

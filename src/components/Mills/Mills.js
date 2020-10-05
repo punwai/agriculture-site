@@ -151,7 +151,7 @@ class Mills extends Component {
                                                 {/* <div style={{ fontSize: "15px"}}>
                                                     Average Buy Price: { item.avg_price } 
                                                 </div> */}
-                                                <div>Reported Average price per 100 Kilograms:</div>
+                                                <div className="pt-2">Reported Average price per 100 Kilograms:</div>
                                                 { item.rice_info.map((rice_type, rice_index) => 
                                                     <div>{rice_type.name}: THB{rice_type.avg} </div>
                                                 )
