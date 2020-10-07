@@ -8,7 +8,7 @@ import { UserContext } from '../../providers/UserProvider'
 import { db } from '../../firebase';
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated';
-
+import { withRouter } from "react-router-dom";
 const animatedComponents = makeAnimated();
 
     
@@ -110,7 +110,8 @@ class AddMill extends Component {
     this.setState({name: e.target.value});
   }
   handleProvince= (e) => {
-    this.setState({province: e.value});
+    console.log(e);
+    this.setState({province: e});
   }
   handlePhone= (e) => {
     this.setState({phone: e.target.value});
@@ -166,13 +167,15 @@ class AddMill extends Component {
     var docData = {
       name: this.state.name,
       phone: this.state.phone,
-      province: this.state.province,
+      province: this.state.province.value,
       address: this.state.address,
       line_id: this.state.line_id,
       rice_info: this.state.types
     };
-    db.collection("mills").add(docData).then(function() {
+    db.collection("mills").add(docData).then(() => {
         console.log("Document successfully written!");
+        var path = `/mills`
+        this.props.history.push(path);
     });
   
   }
@@ -229,4 +232,4 @@ class AddMill extends Component {
     }
 }
 
-export default AddMill;
+export default withRouter(AddMill);

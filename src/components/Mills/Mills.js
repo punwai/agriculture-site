@@ -12,8 +12,17 @@ class Mills extends Component {
     
         this.state = {
             millsList: [],
+            searchTerm: '',
             loading: true
         };
+    }
+
+    editSearchTerm = (e) => {
+        this.setState({searchTerm: e.target.value})
+    }
+
+    dynamicSearch = () => {
+        return this.state.millsList.filter(mill => mill.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
     }
 
     initItems(){
@@ -31,7 +40,7 @@ class Mills extends Component {
                     let avg = 0
                     var count = 0
                     for(let [k, val] of Object.entries(value.reviews)){
-                        avg += val
+                        avg += parseInt(val)
                         count += 1
                     }
                     avg = avg/count;
@@ -101,7 +110,7 @@ class Mills extends Component {
 
                         <Row>
                             <Col xs={10} sm={11}>
-                                <FormControl type="text" placeholder="ค้นจากรูป" className="mr-sm-2 mb-2" />
+                                <FormControl type="text" onChange={this.editSearchTerm} placeholder="ค้นจากรูป" className="mr-sm-2 mb-2" />
                             </Col>
                             <Col xs={2} sm={1} className="pl-0 m-0 searchwrap">
                                 <Button variant="outline-success" className="search-btn"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +143,7 @@ class Mills extends Component {
                         <h2 className="subtitle" style={{ fontSize: "24px" }}>รายการที่พบเจอ <span style={{ color: "grey"}}>( {this.state.millsList.length} รายการ )</span> </h2>
                         <Row className="m-0">
                             <div className="divider"></div>
-                            { this.state.millsList.map((item, index) =>
+                            { this.dynamicSearch().map((item, index) =>
                                 <div>
                                     <Col xs={12} className="expand-hover border-round">
                                         <Row>
