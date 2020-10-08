@@ -93,10 +93,10 @@ import { withRouter } from 'react-router-dom';
                     <div><b>จังหวัด:</b> {this.state.mill.province}</div>
                     <br/>
                     <div><b>ติดต่อ</b></div>
-                    <div><b>ชื่อโรงสี:</b> {this.state.mill.phone}</div>
-                    <div><b>ชื่อโรงสี:</b> {this.state.mill.line_id}</div>
+                    <div><b>โทรศัพท์:</b> {this.state.mill.phone}</div>
+                    <div><b>LINE ID:</b> {this.state.mill.line_id}</div>
                     <br></br>
-                    <div>Collective Price Report (Per 100 kg):</div>
+                    <div>ราคาซื้อข้าวเปลือก (ต่อ 100 กก):</div>
                     <Table striped bordered hover size="sm">
                       <thead>
                         <tr>
