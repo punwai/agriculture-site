@@ -175,7 +175,7 @@ class TimeShare extends Component {
                                                 <div style={{ fontSize: "14px", fontWeight: "600" }} className="newPrice">
                                                     ฿{ item.price_discount }
                                                     <span style={{ fontSize: "12px"}}>
-                                                    &nbsp;/  4 เดือน { item.year_cycle } ปี
+                                                    &nbsp;/  ไทม์แชร์
                                                     </span>
                                                     &nbsp;
                                                     <span style={{ fontSize: "12px"}} className="oldPrice">

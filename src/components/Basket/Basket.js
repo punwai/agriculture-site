@@ -40,6 +40,16 @@ class Basket extends Component {
         this.props.dispatch({type: 'REMOVE_ITEM', item: item.item})
     }
 
+    calculatePrice = () => {
+        var basket = this.props.basket;
+        var total = 0;
+        for(var i = 0; i < basket.length; i++){
+            var sum = parseInt(basket[i].amount) * basket[i].item.price_discount
+            total += sum;
+        }
+        return sum;
+    }
+
     render() {
         console.log(this.props)
         return (
@@ -64,10 +74,12 @@ class Basket extends Component {
                                     <img style={{width:"100px"}} variant="top" src={ basketItem.item.image_url }></img>
                                 </td>
                                 <td md={4}>
-                                    { basketItem.item.name }
+                                    { basketItem.item.name }<br/>
+                                    <b>Brand: </b>
+                                    { basketItem.item.brand }
                                 </td>
                                 <td md={4}>
-                                    ฿{ basketItem.item.price_discount } / 4 เดือน 4 ปี
+                                    ฿{ basketItem.item.price_discount } / ราคา ไทม์แชร์
                                 </td>
                                 <td>
                                     <Button onClick={this.removeOrder.bind(this, basketItem)} className="p-1 mr-auto" style={{ fontSize: "12px"}} variant="danger">
@@ -80,29 +92,39 @@ class Basket extends Component {
                             )}
                             <tr>
                                 <td md={4}>
-                                    Total Price:
                                 </td>
                                 <td md={4}>
-                                    <i>Please enter both start and end dates to calculate</i>
+                                    <b>Total Price:</b>
                                 </td>
                                 <td>
-                                    
+                                    <b>฿{this.calculatePrice()}</b>
                                 </td>
                             </tr>
                         </tbody>
                     </Table>
                     <Form.Group controlId="formGroupEmail">
-                        <Form.Label>จองจาก</Form.Label>
-                        <Form.Control type="email" placeholder="วันที่เร้มจอง"/>
+                        <Row>
+                            <Col xs={6}>
+                                <Form.Label>ชื่อ</Form.Label>
+                                <Form.Control type="text" placeholder="ชื่อ"/>
+                            </Col>
+                            <Col xs={6}>
+                                <Form.Label>นามสกุล</Form.Label>
+                                <Form.Control type="text" placeholder="นามสกุล"/>
+                            </Col>
+                        </Row>
                     </Form.Group>
                     <Form.Group controlId="formGroupEmail">
-                        <Form.Label>จอกถึง</Form.Label>
-                        <Form.Control type="email" placeholder="วันที่เร้มจอง"/>
+                        <Form.Label>เลขที่บัตรประชาชน</Form.Label>
+                        <Form.Control type="text" placeholder="ที่อยู่"/>
                     </Form.Group>
-
+                    <Form.Group controlId="formGroupEmail">
+                        <Form.Label>ที่อยู่</Form.Label>
+                        <Form.Control type="text" placeholder="ที่อยู่"/>
+                    </Form.Group>
                     <Form>
                         <Button variant="primary" onClick={this.sendOrder}>
-                            Submit
+                            Order
                         </Button>
                     </Form>
                 </Container>
