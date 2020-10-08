@@ -58,10 +58,10 @@ export default class About extends Component {
         return (
             <div>
                 <div className="home-container green-container">
-                  <Container className="text-left text-light"><h2 className="m-0">The NaLink Mission</h2></Container>
+                  <Container className="text-left text-light"><h2 className="m-0">The DinRai Mission</h2></Container>
                 </div>
                 <div className="home-container about-container image-container ">
-                  <h2 className="inside-text">ทำไมถึงต้องมี นาลินค์?</h2>
+                  <h2 className="inside-text">ทำไมถึงต้องมีดินไร่?</h2>
                 </div>
                 <br/>
                 <Container className="small-container">

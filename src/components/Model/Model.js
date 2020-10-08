@@ -58,7 +58,7 @@ export default class About extends Component {
         return (
             <div>
                 <div className="home-container green-container ">
-                  <Container className="text-left text-light"><h2 className="m-0">NaLink's Strategic Goals</h2></Container>
+                  <Container className="text-left text-light"><h2 className="m-0">DinRai's Strategic Goals</h2></Container>
                 </div>
                 <div className="home-container image-container model-container">
                   <h2 className="inside-text"> การค้ายุติธรรม, การปลูกประสิทธิภาพ</h2>
@@ -75,23 +75,26 @@ traditional method, and those hiring local agricultural services. To cultivate a
 of 4-5 family members using hand tools, or typically cost around 4000 baht for a 8-rai farm to hire a
 machinery service. It is simply not worth it to hire, but how can farmers purchase 20,000 baht
 equipment when they are in-debt from fertilizers every season from cooperatives?<br/><br/>
-The distinct Thai farming seasons allow farmers to split this cost. Rain-focused rice farms, are only able
+We can allow farmers to split this cost. 
+
+{/* Rain-focused rice farms, are only able
 to operate 6 months a year, while certain fruit farms only require equipment 3-4 months a year to either
 replant old, dying fruit-yielding fields (eg. Durian, Mango, Rambutan, Starfruit, Coconut), or to simply
-sow the seeds to begin a new crop field (eg. Grape, Ginger). Our equipment time-sharing halves the
-price of equipment with this underlying fact (although our partners provide their equipment to us at a
-no-profit price, so the resulting prices drop as low to as 40%). <a href="www.google.com" >Read More</a>
+sow the seeds to begin a new crop field (eg. Grape, Ginger).  */}
+
+Our equipment time-sharing halves the
+price of equipment with this underlying fact (although our partners provide their equipment to us at the
+production rather than market price, so the resulting prices drop as low to as 25-40%). <a href="/timeshare" >More</a>
 <br/><br/>
 <h2>2. Fair Trade</h2>
 Current models of price rice regulation involves a published ‘Average Monthly Rice Price’ document sent
 out by the government each month. However, heavy fluctuations still occur due to the low bargaining
 power farmers have. 
 <br/><br/>
-This low bargaining power is based off the lack of information. Mills disclose their buying prices, so
-farmers sell to the mills either because: 1. Their buying prices have been recommended to them through
-word of mouth and 2. Past proven experiences with the mills. But this means that a farmer typically
-know of and have worked with only 2-3 mills in the vicinity. Buyers can simply suggest lower buying prices, and farmers will have to accept it. Our buying-price reporting service allow farmers to evaluate
-their options with information from crowd-reporting. <a href="www.google.com" >Read More</a>
+There is no central platform to aggregate rice mill offerings, so farmers sell to the mills either because: 
+1. Their buying prices have been recommended to them through word of mouth and 2. Past proven experiences with the mills. However, this means that a farmer typically
+know of and have worked with only 2-3 mills in the vicinity. Mills can simply suggest lower buying prices, and farmers will have to accept it. 
+Our buying-price reporting service allow farmers to evaluate their options with information from crowd-reporting. <a href="mills" >More</a>
 <br/><br/>
 
 <h2>3. Income Expansion</h2>
@@ -107,7 +110,7 @@ monetary support. On the other hand, for farmers who have inherited larger plots
 enough to live, but to financially grow, they need larger plots.
 We strive to change agricultural practices to those like in Japan, where farmers operate huge plots. We
 at DinRai are currently developing a land-leasing platform where contracts can be made and stored
-with a smart-contract. <a href="www.google.com" >Read More</a>                   </p>
+with a smart-contract. <a href="/" >TO BE RELEASED</a>                   </p>
                         <Row>
                     </Row>
                 </Container>

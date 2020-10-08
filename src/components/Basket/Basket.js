@@ -94,7 +94,7 @@ class Basket extends Component {
                                 <td md={4}>
                                 </td>
                                 <td md={4}>
-                                    <b>Total Price:</b>
+                                    <b>ราคารวม:</b>
                                 </td>
                                 <td>
                                     <b>฿{this.calculatePrice()}</b>

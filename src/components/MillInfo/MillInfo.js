@@ -121,8 +121,7 @@ import { withRouter } from 'react-router-dom';
                                 <Button variant="success" onClick={this.submitPrice.bind(this, rice_type.id)} className="btn-sm">Report</Button>
                               </td>
                             </tr>
-                          )
-                          }
+                          ) }
                     </tbody>
                     }
                     </Table>
