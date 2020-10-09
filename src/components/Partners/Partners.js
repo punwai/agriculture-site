@@ -91,31 +91,31 @@ export default class Partners extends Component {
                       </Col>
                       <Col xs={6} md={6} className="p-4">
                         <h4>KTW - Logistics Partner</h4>
-                        <p>The leading powertools distributor of Thailand, with delivery networks spanning from Chiangmai to Songkhla </p>
+                        <p>The leading powertools distributor of Thailand, with delivery networks and maintenance centers spanning across the country </p>
                       </Col>
                     </Row>
                     <Row>
                       <Col xs={2} md={4} className="p-4"><img src={require('../../static/polo-logo.png')} alt="React Logo" width="100%"/>
                       </Col>
                       <Col xs={6} md={6} className="p-4">
-                        <h4>JASIC - Product Partner</h4>
-                        <p>Popular welding tools manufacturer in China and Thailand.</p>
+                        <h4>Polo - Product Partner</h4>
+                        <p>Leading Thai supplier of Construction power tools and Agricultural Machinery</p>
                       </Col>
                     </Row>
                     <Row>
-                      <Col xs={2} md={4} className="p-4"><img src={require('../../static/b-quik.png')} alt="React Logo" width="100%"/>
+                      <Col xs={2} md={4} className="p-4"><img src={require('../../static/makita.png')} alt="React Logo" width="100%"/>
                       </Col>
                       <Col xs={6} md={6} className="p-4">
-                        <h4>BQuik - Maintenance Partner</h4>
-                        <p>Automotive reparations service throughout Thailand. </p>
+                        <h4>Makita - Product Partner</h4>
+                        <p>Heavy duty power tools manufacturer of Japan</p>
                       </Col>
                     </Row>
                     <Row>
-                      <Col xs={2} md={4} className="p-4"><img src={require('../../static/ebara.png')} alt="React Logo" width="100%"/>
+                      <Col xs={2} md={4} className="p-4"><img src={require('../../static/wd40.png')} alt="React Logo" width="100%"/>
                       </Col>
                       <Col xs={6} md={6} className="p-4">
-                        <h4>Ebara - Product Partner</h4>
-                        <p>Waterpumps manufacturer of Japan</p>
+                        <h4>WD40 Thailand - Sponsor</h4>
+                        <p>The No.1 global producer of lubrications for both general house-hold use and specialist heavy-duty purposes </p>
                       </Col>
                     </Row>
                 </Container>

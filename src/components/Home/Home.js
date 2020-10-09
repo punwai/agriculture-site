@@ -217,7 +217,9 @@ class Home extends Component {
                         </Col>
                         <Col xs={6} md={3} className="p-5"><img src={require('../../static/polo-logo.png')} alt="React Logo" width="100%"/>
                         </Col>
-                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/ebara.png')} alt="React Logo" width="100%"/>
+                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/wd40.png')} alt="React Logo" width="100%"/>
+                        </Col>
+                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/makita.png')} alt="React Logo" width="100%"/>
                         </Col>
                     </Row>
                 </Container>
