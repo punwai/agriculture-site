@@ -9,6 +9,13 @@ class Basket extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            first: "",
+            last: "",
+            address: "",
+            id: "",
+        };    
     }
 
     sendOrder = () => {
@@ -44,11 +51,25 @@ class Basket extends Component {
         var basket = this.props.basket;
         var total = 0;
         for(var i = 0; i < basket.length; i++){
+            console.log(basket[i])
             var sum = parseInt(basket[i].amount) * basket[i].item.price_discount
             total += sum;
         }
-        return sum;
+        return total;
     }
+
+    handleFirst = (e) => {
+        this.setState({first: e.target.value});
+    }
+    handleLast= (e) => {
+        this.setState({last: e.target.value});
+    }
+    handleID= (e) => {
+        this.setState({id: e.target.value});
+    }    
+    handleAddress= (e) => {
+        this.setState({address: e.target.value});
+    }    
 
     render() {
         console.log(this.props)
@@ -66,6 +87,12 @@ class Basket extends Component {
                 <br/>
                 <br/>
                 <Container>
+                    { this.props.basket.length == 0 ? <div> <h2 style={{ fontStyle:"italic"}}>คุณยังไม่ได้เพิ่มสินค้าลงตะกร้า โปรดเพิ่มสินค้าลงตะกร้าที่:  &nbsp;<a href="/timeshare"><Button variant="danger">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                            </svg> หน้าร้าน
+                    </Button></a></h2><br/><br/></div> : <div>
+                        
                     <Table>
                         <tbody>
                             { this.props.basket.map((basketItem, index) =>
@@ -106,27 +133,31 @@ class Basket extends Component {
                         <Row>
                             <Col xs={6}>
                                 <Form.Label>ชื่อ</Form.Label>
-                                <Form.Control type="text" placeholder="ชื่อ"/>
+                                <Form.Control onChange={this.handleFirst} value={this.state.first} type="text" placeholder="ชื่อ"/>
                             </Col>
                             <Col xs={6}>
                                 <Form.Label>นามสกุล</Form.Label>
-                                <Form.Control type="text" placeholder="นามสกุล"/>
+                                <Form.Control onChange={this.handleLast} value={this.state.last} type="text" placeholder="นามสกุล"/>
                             </Col>
                         </Row>
                     </Form.Group>
                     <Form.Group controlId="formGroupEmail">
                         <Form.Label>เลขที่บัตรประชาชน</Form.Label>
-                        <Form.Control type="text" placeholder="ที่อยู่"/>
+                        <Form.Control onChange={this.handleID} value={this.state.id} type="text" placeholder="ที่อยู่"/>
                     </Form.Group>
                     <Form.Group controlId="formGroupEmail">
                         <Form.Label>ที่อยู่</Form.Label>
-                        <Form.Control type="text" placeholder="ที่อยู่"/>
+                        <Form.Control onChange={this.handleAddress} value={this.state.address} type="text" placeholder="ที่อยู่"/>
                     </Form.Group>
                     <Form>
-                        <Button variant="primary" onClick={this.sendOrder}>
-                            Order
+                        <Button variant="danger" disabled={! (this.props.basket.length && this.state.first && this.state.last && this.state.id && this.state.address)} onClick={this.sendOrder}>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                        </svg> สั่งซื้อ
                         </Button>
                     </Form>
+</div>}
+
                 </Container>
                 <br/>
                 <br/>

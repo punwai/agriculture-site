@@ -120,7 +120,7 @@ class TimeShare extends Component {
 
                         <Row>
                             <Col xs={10} sm={11}>
-                                <FormControl type="text" placeholder="Search" className="mr-sm-2 mb-2" />
+                                <FormControl type="text" placeholder="ค้นหา" className="mr-sm-2 mb-2" />
                             </Col>
                             <Col xs={2} sm={1} className="pl-0 m-0 searchwrap">
                                 <Button variant="outline-success" className="search-btn"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -199,12 +199,6 @@ class TimeShare extends Component {
                                                         ออกจากตะกร้า
                                                     </Button>
                                                 }
-
-                                
-                                                    <Button className="p-1 mb-1" style={{ fontSize: "12px"}} variant="success">
-                                                        ...
-                                                        เพิ่มเติม
-                                                    </Button>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
