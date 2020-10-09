@@ -66,12 +66,14 @@ import { withRouter } from 'react-router-dom';
   }
 
   submitPrice = (id, e) => {
-
-    var millId = this.props.match.params.id
-    var millsRef = db.collection('mills').doc(millId);
-    millsRef.update({
-      ["rice_info."+id+".reviews."+this.props.user.uid]: this.state.rice_price[id]
-    })
+    if(this.props.user){
+      var millId = this.props.match.params.id
+      var millsRef = db.collection('mills').doc(millId);
+      millsRef.update({
+        ["rice_info."+id+".reviews."+this.props.user.uid]: this.state.rice_price[id],
+        ["rice_info."+id+".late"]: new Date()
+      })  
+    }
   }
 
   render() {
@@ -118,7 +120,7 @@ import { withRouter } from 'react-router-dom';
                                 <Form.Control value={this.state.rice_price[rice_type.id]} onChange={this.handlePrice.bind(this, rice_type.id)}  type="number"  placeholder="ราคา 100 กก."/>
                               </td>
                               <td>
-                                <Button variant="success" onClick={this.submitPrice.bind(this, rice_type.id)} className="btn-sm">Report</Button>
+                                <Button disabled={!this.props.user} variant="success" onClick={this.submitPrice.bind(this, rice_type.id)} className="btn-sm">Report</Button>
                               </td>
                             </tr>
                           )
