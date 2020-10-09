@@ -58,10 +58,10 @@ export default class About extends Component {
         return (
             <div>
                 <div className="home-container green-container">
-                  <Container className="text-left text-light"><h2 className="m-0">The NaLink Mission</h2></Container>
+                  <Container className="text-left text-light"><h2 className="m-0">The DinRai Mission</h2></Container>
                 </div>
                 <div className="home-container about-container image-container ">
-                  <h2 className="inside-text">ทำไมถึงต้องมี นาลินค์?</h2>
+                  <h2 className="inside-text">เป้าหมายของดินไร่</h2>
                 </div>
                 <br/>
                 <Container className="small-container">
@@ -93,27 +93,22 @@ export default class About extends Component {
                       <img width="100%" src={require("./1600769328686.jpg")}></img><br/><br/>
                       </Col>
                       <Col md={6} lg={7}>
-                        In this photo is Khaw and I. In my mouth is the greatest, sweetest longbean in the world, organically-grown locally in our beautiful province of Saraburi.
-                        Thai agriculture feeds Thai people, but Thai farmers are amongst the poorest in the world.
+                        In this photo is Khaw and I. In my mouth is the a great, sweet longbean, organically-grown locally in the province of Rachaburi.
+                        Thai agriculture feeds Thai people, but Thai farmers are amongst those poorest in the country.
                         Since perhaps 12, working with me on the floor of my family's warehouse have always been former farmers, including Khaw. Our country's lack of investment 
                         into the agricultural industry have led to a situation where Khaw and fellow co-workers are forced down to Bangkok to find sufficient income for their families.
-                        After a discussion with Khaw about his family's farming practices led me to realize that we need to change our archaic agricultural
-                        industry.
+                        After a discussion with Khaw about his family's traditional farming practices led me to realize that we need to help improve our agricultural sector.
                         <br/><br/>
                       </Col>
                       <Col md={0} lg={3}></Col>
                     </Row>
-                      As a mechanic, Khao now works part-time dealing with repairs in Bangkok and Isaan, while I am honored to lead the technology and operations team. Through our experience,
-                      we have discovered that time-sharing is the tip of the iceberg, and our goal is far from reach, farmers are still limited by their tiny, inherited lands which can never
-                      provide sufficient income regardless of how much is grown, we need to create change not only in the practices but the underlying system in land ownership and commerce.
-                      Farmers shouldn't need to abandon their homes to escape poverty.<br/><br/>
+                      As a mechanic, Khao now works part-time dealing with repairs for DinRai renters, while I am honored to lead the overall project. 
+                      Time-sharing is the tip of the iceberg, and our goal is far from reach, farmers are still limited by multitudes of factors limiting income
+                      such as small available plots of lands. With such small plots, sufficient income for modern-day expenditures is difficult to achieve. 
+                      Together we need to help transform the underlying system in land ownership and commerce for a better agricultural future.<br/><br/>
                         - Pun Suppakit
                       <br/>
                       <br/>
-                    <h5 className="subtitle">Our Strategy</h5>
-                    <p>
-                      Insert Diagram
-                    </p>
                     <br/><br/>
                     <Row>
                 </Row>

@@ -61,7 +61,7 @@ export default class Partners extends Component {
                   <Container className="text-left text-light"><h2 className="m-0">Partner with us</h2></Container>
                 </div>
                 <div className="home-container image-container model-container">
-                  <h2 className="inside-text"> บริษัทไทย ช่วยชาวนาไทย </h2>
+                  <h2 className="inside-text"> บริษัทไทยร่วมมือช่วยเกษตรไทย </h2>
                 </div>
                 <br/>
                 <Container className="small-container">
