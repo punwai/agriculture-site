@@ -73,7 +73,7 @@ class Order extends Component {
                                 3. โอนเงินมาตามจำนวนที่ได้ระบุไว้ก่อนหน้า
                             </p>
                             <div class="line-it-button" data-lang="en" data-type="friend" data-lineid="@803ssfip"></div>
-                            <a href="line://ti/p/@803ssfip"></a><Button className="lineButton"> DinRai LINE Official Account </Button>
+                            <a href="line://ti/p/@803ssfip"><Button className="lineButton"> DinRai LINE Official Account </Button></a>
                         </Col>         
                     }
             </Container>   
