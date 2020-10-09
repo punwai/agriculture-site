@@ -119,13 +119,13 @@ class App extends Component {
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="/contact">{t('contact')}</NavDropdown.Item>
                       </NavDropdown>
-                      <NavDropdown title={t('policy')} className="nav-dropdown" show={this.state.show2} onMouseEnter={this.showDropdown2} onMouseLeave={this.hideDropdown2}>
+                      {/* <NavDropdown title={t('policy')} className="nav-dropdown" show={this.state.show2} onMouseEnter={this.showDropdown2} onMouseLeave={this.hideDropdown2}>
                         <NavDropdown.Item href="/fromthefounder">{t('FAQ')}</NavDropdown.Item>
                         <NavDropdown.Item href="/model">{t('refund')}</NavDropdown.Item>
                         <NavDropdown.Item href="/partners">{t('shipping')}</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="/contact">{t('contact')}</NavDropdown.Item>
-                      </NavDropdown>
+                      </NavDropdown> */}
                       {/* <Nav.Link href="/features">ข่าวสาร</Nav.Link> */}
                       <Nav.Link href="/timeshare">{t('timeshare')}</Nav.Link>
                       <Nav.Link href="/mills">{t('riceprice')}</Nav.Link>
