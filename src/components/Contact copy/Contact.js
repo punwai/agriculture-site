@@ -61,7 +61,7 @@ export default class Partners extends Component {
                   <Container className="text-left text-light"><h2 className="m-0">Contact Us</h2></Container>
                 </div>
                 <div className="home-container image-container model-container">
-                  <h2 className="inside-text"> ติตด่อดินไร่</h2>
+                  <h2 className="inside-text"> การค้ายุติธรรม, การปลูกประสิทธิภาพ</h2>
                 </div>
                 <br/>
                 <Container className="small-container">
@@ -90,8 +90,6 @@ export default class Partners extends Component {
                     </p>
                         <Row>
                     </Row>
-                    <br/>
-                    <br/>
                 </Container>
                 <Container>
                     <div className="specialContainer">
