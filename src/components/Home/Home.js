@@ -149,25 +149,25 @@ class Home extends Component {
                     <Row>
                         <Col className="text-center pb-3" xs={6} md={3}><img src={Graphics1} className="img-main" alt="React Logo" width="100%"/>
                             <h3 className="text-center mt-4 title-info">{t('browse')}</h3>
-                            <div className="text-center mt-4">{t('browsedesc')}</div>
+                            <div className="text-center mt-4 smalltext">{t('browsedesc')}</div>
                         </Col>
                         <Col className="text-center pb-3" xs={6} md={3}><img className="img-main" src={Graphics4} alt="React Logo" width="100%"/>
                             <h3 className="text-center mt-4 title-info">{t('book')}</h3>
-                            <div className="text-center mt-4">{t('bookdesc')}</div>
+                            <div className="text-center mt-4 smalltext">{t('bookdesc')}</div>
                         </Col>
                         <Col className="text-center pb-3" xs={6} md={3}><img className="img-main" src={Graphics3} alt="React Logo" width="100%"/>
                             <h3 className="text-center mt-4 title-info">{t('confirm')}</h3>
-                            <div className="text-center mt-4">{t('confirmdesc')}</div>
+                            <div className="text-center mt-4 smalltext">{t('confirmdesc')}</div>
                         </Col>
                         <Col className="text-center pb-3" xs={6} md={3}><img className="img-main" src={Graphics2} alt="React Logo" width="100%"/>
                             <h3 className="text-center mt-4 title-info">{t('ship')}</h3>
-                            <div className="text-center mt-4">{t('shipdesc')}</div>
+                            <div className="text-center mt-4 smalltext">{t('shipdesc')}</div>
                         </Col>
                     </Row>
                     <br/>
                     <br/>
                     <h2 className="subtitle">{t('newproducts')}</h2>
-                    <p>
+                    <p className="smalltext">
                         {t('newproductsdesc')}
                     </p>
                 </Container>
@@ -216,8 +216,6 @@ class Home extends Component {
                         <Col xs={6} md={3} className="p-5"><img src={require('../../static/ktw-logo.png')} alt="React Logo" width="100%"/>
                         </Col>
                         <Col xs={6} md={3} className="p-5"><img src={require('../../static/polo-logo.png')} alt="React Logo" width="100%"/>
-                        </Col>
-                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/b-quik.png')} alt="React Logo" width="100%"/>
                         </Col>
                         <Col xs={6} md={3} className="p-5"><img src={require('../../static/ebara.png')} alt="React Logo" width="100%"/>
                         </Col>
