@@ -135,7 +135,7 @@ class Home extends Component {
                     <h2 className="subtitle">{t('whatis')}</h2>
                     <Row>
                         <Col xs={12} md={8}>
-                            <p>
+                            <p className="medtext">
                             {t('whatisdesc')}
                             </p>
                         </Col>
