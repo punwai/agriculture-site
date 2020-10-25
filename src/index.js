@@ -10,6 +10,7 @@ import basketReducer from './basket'
 import userReducer from './user'
 import { loadState, saveState } from './localStorage'
 import "./i18n";
+import HttpsRedirect from 'react-https-redirect';
 
 // const SET_ID = 'ADD_TODO'
 // const UNSET_ID = 'ADD_TODO'
@@ -75,7 +76,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <CookiesProvider>
+        <HttpsRedirect>
         <App />
+        </HttpsRedirect>
       </CookiesProvider>
     </Provider>
   </React.StrictMode>,
