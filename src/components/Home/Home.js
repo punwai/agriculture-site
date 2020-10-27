@@ -89,6 +89,15 @@ class Home extends Component {
 
             ]
         };
+
+        var settings2 = {
+            dots: true,
+            infinite: true,
+            speed: 200,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        };
+
       
         return (
             <div>
@@ -207,11 +216,26 @@ class Home extends Component {
                     <br/>
                     <br/>
                     <br/>
-
+                    
+                    <h2 className="subtitle">{t('testimonials')}</h2>
+                    <p className="subdescription">
+                        {t('testidesc')}
+                    </p>
+                    <Slider {...settings2}>
+                        <div className="pl-3"><img width="100%" variant="top" src={require("./33333.png")}></img><div className="testi"><p className="testiword" class="text-center">{t('testi1')}</p></div></div>
+                        <div className="pl-3"><img width="100%" variant="top" src={require("./44444.png")}></img><div className="testi"><p className="testiword" class="text-center">{t('testi2')}</p></div></div>
+                        <div className="pl-3"><img width="100%" variant="top" src={require("./55555.png")}></img><div className="testi"><p className="testiword" class="text-center">{t('testi3')}</p></div></div>
+                    </Slider>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                     <h2 className="subtitle">{t('partnerslong')}</h2>
                     <p className="subdescription">
                         {t('partnerslongdesc')}
                     </p>
+                    <br/>
                     <Row>
                         <Col xs={6} md={3} className="p-5"><img src={require('../../static/ktw-logo.png')} alt="React Logo" width="100%"/>
                         </Col>
