@@ -112,7 +112,7 @@ class Home extends Component {
                                 <div className="bannerDescription pb-3" >{t('dashdesc')}</div>
                                 <div className="bannerDescription pb-5"><Button href="/timeshare" style={{ width: "30%" }} variant="danger">                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill top-margin-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-                        </svg>&nbsp;&nbsp;{t('order')}!</Button></div>
+                        </svg>&nbsp;&nbsp;{t('order')}</Button></div>
                             </Col>
                         </Row>
                     </Container>
@@ -214,28 +214,43 @@ class Home extends Component {
                     </div>
                     <br/>
                     <br/>
+
+                </Container>
+                <div className="background-grey">
+                    <Container>
+                        <br/>
+                        <br/>
+                        <h2 className="subtitle text-gr">{t('testimonials')}</h2>
+                        <p className="smalltext text-gr">
+                            {t('testidesc')}
+                        </p>
+                        <Slider {...settings2}>
+                            <div className="pl-3 text-gr"><img width="100%" variant="top" src={require("./33333.png")}></img><div className="testi"><p className="text-center text-gr">{t('testi1')}</p></div></div>
+                            <div className="pl-3 text-gr"><img width="100%" variant="top" src={require("./44444.png")}></img><div className="testi"><p className="text-center text-gr">{t('testi2')}</p></div></div>
+                            <div className="pl-3 text-gr"><img width="100%" variant="top" src={require("./55555.png")}></img><div className="testi"><p className="text-center text-gr">{t('testi3')}</p></div></div>
+                        </Slider>
+                    </Container>
+                </div>
+                <Container>
                     <br/>
                     <br/>
-                    
-                    <h2 className="subtitle">{t('testimonials')}</h2>
-                    <p className="subdescription">
-                        {t('testidesc')}
+                    <br/>
+                    <h2 className="subtitle">{t('pricereporting')}</h2>
+                    <p className="smalltext">
+                        {t('pricereportingdesc')}
                     </p>
-                    <Slider {...settings2}>
-                        <div className="pl-3"><img width="100%" variant="top" src={require("./33333.png")}></img><div className="testi"><p className="testiword" class="text-center">{t('testi1')}</p></div></div>
-                        <div className="pl-3"><img width="100%" variant="top" src={require("./44444.png")}></img><div className="testi"><p className="testiword" class="text-center">{t('testi2')}</p></div></div>
-                        <div className="pl-3"><img width="100%" variant="top" src={require("./55555.png")}></img><div className="testi"><p className="testiword" class="text-center">{t('testi3')}</p></div></div>
-                    </Slider>
-                    <br/>
-                    <br/>
+                    <div><img width="100%" variant="top" src={require("./Frame 1.png")}></img></div>
+                    <Button href="/timeshare" style={{ width: "30%" }} variant="danger"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+</svg>
+&nbsp;&nbsp;{t('pricereportingbut')}</Button>
                     <br/>
                     <br/>
                     <br/>
                     <h2 className="subtitle">{t('partnerslong')}</h2>
-                    <p className="subdescription">
+                    <p className="small-text">
                         {t('partnerslongdesc')}
                     </p>
-                    <br/>
                     <Row>
                         <Col xs={6} md={3} className="p-5"><img src={require('../../static/polo-logo.png')} alt="React Logo" width="100%"/>
                         </Col>
@@ -244,9 +259,10 @@ class Home extends Component {
                         <Col xs={6} md={3} className="p-5"><img src={require('../../static/moa.png')} alt="React Logo" width="100%"/>
                         </Col>
                     </Row>
-                    <p><a href="/partners" style={{fontSize: "20px"}}>More on our Partners</a></p>
+                    <p><a href="/partners" style={{fontSize: "15px"}}>{t('extra')}</a></p>
                 </Container>
-
+                <br/>
+                <br/>
             </div>
         )
     }

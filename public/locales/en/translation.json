@@ -28,13 +28,17 @@
     "bookdesc": "Book your order and enter your details. We will act as an intermediate for the sharing arrangements, to prevent any quarrels over issues such as maintenance",
     "confirmdesc": "Verify your timeshare by sending your ID card to our LINE OFFICIAL ACCOUNT. A payment link will be sent once your order has been matched with another customer's",
     "shipdesc": "Your products will be delivered within 14-24 days. We deliver through our partner's delivery network so contact the LINE OFFICIAL ACCOUNT to track your package.",
-    "newproducts": "New Catalogue Additions!",
-    "newproductsdesc": "Our machinery are applicable to wide ranges of functionalities, from ",
+    "newproducts": "New Catalogue Additions",
+    "newproductsdesc": "We offer time-share leasing options for our soil tilling and cultivation machinery - as well as regular leasing options for water pumps and rice millers.",
     "partnerslong": "Partners",
-    "partnerslongdesc": "DinRai will never be possible with the support of our amazing partners",
+    "partnerslongdesc": "DinRai would've never been possible with the support of our exceptional partners",
     "testimonials": "Testimonials",
-    "testidesc": "Hear from our clients who answer the question: why trust DinRai?",
+    "testidesc": "Hear from our clients who have leased agricultural machinery from DinRai",
     "testi1": "Usually I would pay our neighbours to come help till our field with tools. [DinRai's] lease is much cheaper than labour costs which we pay 3,000 baht for. - K'Yao, Vegetable Farmer, Rachaburi Province",
     "testi2": "We heard about DinRai through a my friend's shared message on LINE. The machines were in good condition. It was much cheaper than short-term rentals, and sharing it with my cousin through the system makes it even cheaper - Loong'Poon, Lime Farmer, Rachaburi Province",
-    "testi3": "We usually hire the local tractor companies to till our 10-rai field, which would usually cost 4,000 baht. Long-term leasing hasn't caused any problems so far, and the cheaper prices are always great for us, because we do not have much cash. - K'Tum and Father, Vegetable Farmers, Rachaburi Province"
+    "testi3": "We usually hire the local tractor companies to till our 10-rai field, which would usually cost 4,000 baht. Long-term leasing hasn't caused any problems so far, and the cheaper prices are always great for us, because we do not have much cash. - K'Tum and Father, Vegetable Farmers, Rachaburi Province",
+    "pricereporting": "Rice Prices Information", 
+    "pricereportingdesc": "Access mill-offered buying prices of paddy rice through a community-updated database. By disclosing buying prices of different regional rice mills, we are increasing transparency in rice commerce, disallowing wealthy mills to take advantage of farmers through lack of information, and increasing rice buying price through instilling competition.",
+    "pricereportingbut": "Visit Database",
+    "extra": "More on our partnerts"
 } 
