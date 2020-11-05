@@ -239,11 +239,12 @@ class Home extends Component {
                     <Row>
                         <Col xs={6} md={3} className="p-5"><img src={require('../../static/polo-logo.png')} alt="React Logo" width="100%"/>
                         </Col>
-                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/wd40.png')} alt="React Logo" width="100%"/>
+                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/ebara.png')} alt="React Logo" width="100%"/>
                         </Col>
-                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/makita.png')} alt="React Logo" width="100%"/>
+                        <Col xs={6} md={3} className="p-5"><img src={require('../../static/moa.png')} alt="React Logo" width="100%"/>
                         </Col>
                     </Row>
+                    <p><a href="/partners" style={{fontSize: "20px"}}>More on our Partners</a></p>
                 </Container>
 
             </div>

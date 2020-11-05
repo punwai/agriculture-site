@@ -69,9 +69,9 @@ export default class Partners extends Component {
                     <Row>
                         <Col xs={6} md={3} className="p-4"><img src={require('../../static/polo-logo.png')} alt="React Logo" width="100%"/>
                         </Col>
-                        <Col xs={6} md={3} className="p-4"><img src={require('../../static/b-quik.png')} alt="React Logo" width="100%"/>
-                        </Col>
                         <Col xs={6} md={3} className="p-4"><img src={require('../../static/ebara.png')} alt="React Logo" width="100%"/>
+                        </Col>
+                        <Col xs={6} md={3} className="p-4"><img src={require('../../static/moa.png')} alt="React Logo" width="100%"/>
                         </Col>
                     </Row>
                     <br/>
@@ -89,23 +89,27 @@ export default class Partners extends Component {
                       </Col>
                       <Col xs={6} md={6} className="p-4">
                         <h4>Polo - Product Partner</h4>
-                        <p>Leading Thai supplier of Construction power tools and Agricultural Machinery</p>
+                        <p>Leading Thai Agricultural Machinery company - known by farmers as an affordable, reliable choice of machinery, as seen by their explosive growth in the past few years. Polo provides us with 
+                          tillers at the wholesale-price, allowing us to deliver equipment to farmers at much more affordable prices.
+                        </p>
                       </Col>
                     </Row>
                     <Row>
-                      <Col xs={2} md={4} className="p-4"><img src={require('../../static/makita.png')} alt="React Logo" width="100%"/>
+                      <Col xs={2} md={4} className="p-4"><img src={require('../../static/ebara.png')} alt="React Logo" width="100%"/>
                       </Col>
                       <Col xs={6} md={6} className="p-4">
-                        <h4>Makita - Product Partner</h4>
-                        <p>Heavy duty power tools manufacturer of Japan</p>
+                        <h4>Ebara Thailand - Product Partner</h4>
+                        <p>Ebara Corporation is a manufacturer of environmental and industrial machinery, and famously known in Thailand for their high-quality water pumps. Ebara Thailand has kindly supplied us with water pumps
+                          at the wholesale price, allowing us to reach out to farmers with up to 30% cheaper prices.
+                        </p>
                       </Col>
                     </Row>
                     <Row>
-                      <Col xs={2} md={4} className="p-4"><img src={require('../../static/wd40.png')} alt="React Logo" width="100%"/>
+                      <Col xs={2} md={4} className="p-4"><img src={require('../../static/moa.png')} alt="React Logo" width="100%"/>
                       </Col>
                       <Col xs={6} md={6} className="p-4">
-                        <h4>WD40 Thailand - Sponsor</h4>
-                        <p>The No.1 global producer of lubrications for both general house-hold use and specialist heavy-duty purposes </p>
+                        <h4>Ministry of Agriculture and Cooperatives - Supporter</h4>
+                        <p>The Ministry of Agriculture and Cooperatives have kindly offered their guidance and assistance to DinRai, from outreach through their provincial offices, to access of the Office of Agricultural Economic's database to publish reliable rice-mill data for certain regions.</p>
                       </Col>
                     </Row>
                 </Container>
