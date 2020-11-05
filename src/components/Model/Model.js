@@ -83,8 +83,8 @@ replant old, dying fruit-yielding fields (eg. Durian, Mango, Rambutan, Starfruit
 sow the seeds to begin a new crop field (eg. Grape, Ginger).  */}
 
 Our equipment time-sharing halves the
-price of equipment with this underlying fact (although our partners provide their equipment to us at the
-production rather than market price, so the resulting prices drop as low to as 25-40%). <a href="/timeshare" >More</a>
+price of equipment, and coupled with the benefit of our partners providing their equipment to us at the
+production rather than market price, the resulting prices drop as low to as 35-40% as opposed to normal leasing <a href="/timeshare" >More</a>
 <br/><br/>
 <h2>2. Fair Trade</h2>
 Current models of price rice regulation involves a published ‘Average Monthly Rice Price’ document sent
@@ -110,7 +110,7 @@ monetary support. On the other hand, for farmers who have inherited larger plots
 enough to live, but to financially grow, they need larger plots.
 We strive to change agricultural practices to those like in Japan, where farmers operate huge plots. We
 at DinRai are currently developing a land-leasing platform where contracts can be made and stored
-with a smart-contract. <a href="/" >TO BE RELEASED</a>                   </p>
+with an Ethereum smart-contract. <a href="/" >TO BE RELEASED</a>                   </p>
                         <Row>
                     </Row>
                 </Container>

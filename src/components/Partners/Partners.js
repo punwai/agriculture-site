@@ -67,8 +67,6 @@ export default class Partners extends Component {
                 <Container className="small-container">
                 <br/>
                     <Row>
-                        <Col xs={6} md={3} className="p-4"><img src={require('../../static/ktw-logo.png')} alt="React Logo" width="100%"/>
-                        </Col>
                         <Col xs={6} md={3} className="p-4"><img src={require('../../static/polo-logo.png')} alt="React Logo" width="100%"/>
                         </Col>
                         <Col xs={6} md={3} className="p-4"><img src={require('../../static/b-quik.png')} alt="React Logo" width="100%"/>
@@ -86,14 +84,6 @@ export default class Partners extends Component {
                       country-wide low-cost shipping, and maintenance at their service stations.
                     </p>
                     <h2>Our Partners</h2>
-                    <Row>
-                      <Col xs={2} md={4} className="p-4"><img src={require('../../static/ktw-logo.png')} alt="React Logo" width="100%"/>
-                      </Col>
-                      <Col xs={6} md={6} className="p-4">
-                        <h4>KTW - Logistics Partner</h4>
-                        <p>The leading powertools distributor of Thailand, with delivery networks and maintenance centers spanning across the country </p>
-                      </Col>
-                    </Row>
                     <Row>
                       <Col xs={2} md={4} className="p-4"><img src={require('../../static/polo-logo.png')} alt="React Logo" width="100%"/>
                       </Col>
