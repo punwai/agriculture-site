@@ -66,7 +66,7 @@ export default class About extends Component {
                 <br/>
                 <Container className="small-container">
                     <br/>
-                    <h3>It's <i>time</i> for our beloved Thai agriculture to change</h3>
+                    <h3>From the Founder</h3>
                     <p className="normal-text">
                         We at DinRai are striving to create a society where agricultural practices and ways of lives can co-exist
                         with the rapidly changing Thai society. We believe that with the right development programs, incentives
@@ -84,45 +84,23 @@ export default class About extends Component {
                         the small costs of yearly equipment maintenance and transport of equipment. We are incredibly
                         grateful of our partners, who have made all of this possible, by lending us a hand with their shipment
                         networks and maintenance services.
+                        <br/>
                     </p>
                     <br/>
-                    <h5 className="subtitle">From the Founder</h5>
                     <br/>
                     <Row>
                       <Col md={6} lg={5}>
                       <img width="100%" src={require("./1600769328686.jpg")}></img><br/><br/>
                       </Col>
                       <Col md={6} lg={7}>
-                        In this photo is Khaw and I. In my mouth is the a great, sweet longbean, organically-grown locally in the province of Rachaburi.
-                        Thai agriculture feeds Thai people, but Thai farmers are amongst those poorest in the country.
-                        Since perhaps 12, working with me on the floor of my family's warehouse have always been former farmers, including Khaw. Our country's lack of investment 
-                        into the agricultural industry have led to a situation where Khaw and fellow co-workers are forced down to Bangkok to find sufficient income for their families.
-                        After a discussion with Khaw about his family's traditional farming practices led me to realize that we need to help improve our agricultural sector.
-                        <br/><br/>
+                      - Pun Suppakit
                       </Col>
                       <Col md={0} lg={3}></Col>
                     </Row>
-                      As a mechanic, Khao now works part-time dealing with repairs for DinRai renters, while I am honored to lead the overall project. 
-                      Time-sharing is the tip of the iceberg, and our goal is far from reach, farmers are still limited by multitudes of factors limiting income
-                      such as small available plots of lands. With such small plots, sufficient income for modern-day expenditures is difficult to achieve. 
-                      Together we need to help transform the underlying system in land ownership and commerce for a better agricultural future.<br/><br/>
-                        - Pun Suppakit
                       <br/>
                       <br/>
-                    <br/><br/>
                     <Row>
                 </Row>
-                </Container>
-                <Container>
-                    <div className="specialContainer">
-                    <Slider {...settings}>
-                        {/* { this.state.itemsList.map((item, index) =>
-                                <Card className="m-3">
-                                </Card>
-                            )
-                        } */}
-                    </Slider>
-                    </div>
                 </Container>
 
             </div>
