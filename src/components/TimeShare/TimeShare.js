@@ -4,6 +4,7 @@ import './TimeShare.scss';
 import { db } from '../../firebase';
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import Select from 'react-select'
 
 function MyVerticallyCenteredModal(props) {
     return (
@@ -42,7 +43,9 @@ class TimeShare extends Component {
             itemsList: [],
             modalShow: false,
             item: {},
-            loading: true
+            loading: true,
+            brand: "",
+            searchTerm: "",
         };
     }
 
@@ -90,6 +93,16 @@ class TimeShare extends Component {
         this.setState({shownIndex: index})
     }
 
+    dynamicSearch = () => {
+        if(this.state.brand && this.state.brand.value) {
+            return this.state.itemsList.filter(item => { 
+                return item.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()) && item.brand == this.state.brand.value
+            })
+        }else{
+            return this.state.itemsList.filter(item => item.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
+        }
+    }
+
     addToCart = (index, e) => {
         this.props.dispatch({type: 'ADD_ITEM', item: this.state.itemsList[index]})
     }
@@ -97,6 +110,24 @@ class TimeShare extends Component {
     removeFromCart = (index, item) => {
         this.props.dispatch({type: 'REMOVE_ITEM', item: this.state.itemsList[index]})
     }
+
+    options = [
+        {value: null, label: '-' },
+        {value: "Makita", label: 'MAKITA' },
+        {value:"Polo", label: 'POLO' },
+        {value:"Ebara",label: 'EBARA' },
+        {value:"Franklin Electric",label: 'FRANKLIN ELECTRIC' },
+      ]    
+
+      handleProvince= (e) => {
+        console.log(e);
+        this.setState({brand: e});
+      }
+
+      editSearchTerm = (e) => {
+        this.setState({searchTerm: e.target.value})
+    }
+
     render() {
         console.log(this.props.basket)
         console.log(this.props.user)
@@ -120,7 +151,7 @@ class TimeShare extends Component {
 
                         <Row>
                             <Col xs={10} sm={11}>
-                                <FormControl type="text" placeholder="ค้นหา" className="mr-sm-2 mb-2" />
+                                <FormControl onChange={this.editSearchTerm} type="text" placeholder="ค้นหา" className="mr-sm-2 mb-2" />
                             </Col>
                             <Col xs={2} sm={1} className="pl-0 m-0 searchwrap">
                                 <Button variant="outline-success" className="search-btn"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -137,17 +168,13 @@ class TimeShare extends Component {
 </svg> คัดเลือก
 : &nbsp; &nbsp;
                             <span>
-                                <DropdownButton className="sortDrop" id="dropdown-item-button" title="ราคา">
-                                <Dropdown.Item as="button">ราคา: สูงสุดถึงต่ำสุด</Dropdown.Item>
-                                <Dropdown.Item as="button">ราคา: ต่ำสุดถึงสูงสุด</Dropdown.Item>
-                                </DropdownButton>
-                                &nbsp;&nbsp;
-                                <DropdownButton className="sortDrop" id="dropdown-item-button" title="ยี่ห้อ">
-                                <Dropdown.Item as="makit">MAKITA</Dropdown.Item>
-                                <Dropdown.Item as="button">POLO</Dropdown.Item>
-                                <Dropdown.Item as="button">EBARA</Dropdown.Item>
-                                <Dropdown.Item as="button">FRANKLIN ELECTRIC</Dropdown.Item>
-                                </DropdownButton>
+                                <span>
+                                <Select className="short"
+                                placeholder="ยี่ห้อ"
+                                onChange={this.handleProvince}
+                                options={this.options}
+                                />
+                                </span>
                             </span>                  
                         </div>
 
@@ -158,7 +185,7 @@ class TimeShare extends Component {
   <path fill-rule="evenodd" d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
 </svg> สินค้าทั้งหมดที่คัดกรอง <span style={{ color: "grey"}}>( {this.state.itemsList.length} รายการ )</span>
                         <Row className="m-0">
-                            { this.state.itemsList.map((item, index) =>
+                            { this.dynamicSearch().map((item, index) =>
                                 <Col xs={6} sm={4} md={4} lg={3} className="p-1">
                                     {/* <Card className="hoverable" onClick={this.openModal.bind(item)}> */}
                                     <Card className="hoverable">
